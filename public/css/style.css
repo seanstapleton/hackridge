@@ -1,8 +1,50 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+.mlh {
+  position: absolute;
+  right: 100px;
+}
+
+.banner {
+  /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hackathon2016.jpg') center center no-repeat #000;*/
+  background: url('/img/welcome.png');
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+  -o-background-size:cover;
+}
+
+nav ul {
+  position: absolute;
+  left: 0px;
+}
+nav li {
+  list-style-type: none;
+  float: left;
+  padding: 20px;
+}
+nav a {
+  color: #fff;
+}
+
+.qfaq {
+  background: #333;
+  color: #fff;
+  float: left;
+}
+.qfaq:nth-child(even) {
+  margin-left: 10px;
+}
+.qfaq h1 {
+  font-size: 1.5em;
 }
