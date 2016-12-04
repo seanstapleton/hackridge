@@ -5,6 +5,11 @@ body {
 a {
   color: #00B7FF;
 }
+a:link , a:visited, a:hover, a.active  {
+    text-decoration: none;
+}
+
+
 .container {
   width: 100%;
   padding: 0;
@@ -15,14 +20,6 @@ a {
   right: 100px;
 }
 
-.banner {
-  /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/img/hackathon2016.jpg') center center no-repeat #000;*/
-  background: url('/img/welcome.png');
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
-  -o-background-size:cover;
-}
 
 nav ul {
   position: absolute;
@@ -35,16 +32,41 @@ nav li {
 }
 nav a {
   color: #fff;
+  font-size: 18px;
+}
+/* ------------------ */
+section {
+    padding: 150px 60px;
+}
+.section-heading {
+    color: #262625;
+    text-align: center;
+}
+.section-lead {
+    margin: 30px 0;
+    font-size: 4em;
+}
+.section-content {
+    color: #262625;
+    padding: 20px;
+}
+section.about {
+    background-color: #ecdfd5;
 }
 
-.qfaq {
-  background: #333;
-  color: #fff;
-  float: left;
-}
-.qfaq:nth-child(even) {
-  margin-left: 10px;
-}
-.qfaq h1 {
-  font-size: 1.5em;
+
+/* - */
+.full {
+    display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url('/img/welcome4.png') no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }

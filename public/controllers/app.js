@@ -10,4 +10,8 @@
 
       $locationProvider.html5Mode(true);
   }]);
+
+  app.controller('LandingController', ['$scope', '$http', function($scope, $http) {
+    $scope.check = "Yo";
+  }]);
 }());
