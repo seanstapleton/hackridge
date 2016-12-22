@@ -71,13 +71,14 @@ section.about {
   z-index: -99;
 }
 .glow {
-  width: 10%;
+  width: 40%;
   height: 100%;
   position: absolute;
+  /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(173, 58, 62, 1), rgba(0,0,0,0));*/
   background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));
   z-index: -999;
   animation-name: marquee;
-  animation-duration: 10s;
+  animation-duration: 13s;
   animation-iteration-count: infinite;
 }
 .full {
@@ -93,6 +94,6 @@ section.about {
 
 /* ------- */
 @keyframes marquee {
-  from {left: 0;}
+  from {left: -40%;}
   to {left: 100%;}
 }
