@@ -1,54 +1,49 @@
+/* -------------------------
+--------- General ----------
+------------------------- */
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: rgba(60,60,60,1);
 }
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
 a {
   color: #00B7FF;
 }
 a:link , a:visited, a:hover, a.active  {
     text-decoration: none;
 }
-
-.faq {
-  background: #222;
-  color: #fff;
-}
-.faq h1 {
-  color: #fff;
-  padding: 20px;
-}
-
-.faq-header h3, .faq-cell h3 {
-  margin: 0;
-  margin-bottom: 10px;
-}
-.faq-header, .faq-cell {
-  background: none;
-  color: #fff;
-  padding: 2%;
-  border-radius: 10px;
-  text-align: justify;
-}
-.faq-row {
-  height: 50px;
-}
 .container {
   width: 100%;
   padding: 0;
 }
-
-.mlh {
-  position: absolute;
-  right: 100px;
+section {
+    padding: 150px 60px;
+    background: #fff;
+}
+.section-heading {
+    color: #262625;
+    text-align: center;
+}
+.overlay {
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.section-lead {
+    margin: 30px 0;
+    font-size: 4em;
+}
+.section-content {
+    color: #262625;
+    padding: 20px;
 }
 
-
+/* -------------------------
+--------- Launch ----------
+------------------------- */
 nav ul {
   position: absolute;
   left: 0px;
@@ -60,66 +55,24 @@ nav li {
 }
 nav a {
   color: #fff;
-  font-size: 18px;
+  /*font-size: 18px;*/
+  font-size: 2em;
 }
-/* ------------------ */
-section {
-    padding: 150px 60px;
-    background: #fff;
+.mlh {
+  position: absolute;
+  right: 100px;
 }
-.section-heading {
-    color: #262625;
-    text-align: center;
-}
-.this-is h1 {
-  color: #fff;
-  text-align: right;
-  width: 50%;
-  font-size: 10em;
-  float: left;
-  font-family: "Adam CG";
-}
-.this-is-content {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-  margin-left: 2%;
-  width: 48%;
-  margin-top: 5%;
-  padding: 4% 4% !important;
-}
-.this-is-content h4 {
-  text-align: left;
-  line-height: 2em;
-  color: #fff;
-}
-.section-lead {
-    margin: 30px 0;
-    font-size: 4em;
-}
-.section-content {
-    color: #262625;
-    padding: 20px;
-}
-section.about {
-  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/hack20162.JPG");
-  background-position: 0 80%;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-/* - */
 .circuit {
   position: absolute;
   top: 0;
   left: 0;
-  background: url('/img/circuit.png');
+  background: url('/img/optimized/circuit.png');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -99;
 }
 .glow {
@@ -133,60 +86,107 @@ section.about {
   animation-duration: 13s;
   animation-iteration-count: infinite;
 }
+.glow-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .full {
-  height: 100vh;
+  height: 80vh;
   text-align: center;
   color: white;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 }
-
+.logo {
+  width: 90%;
+  margin: 40% 5% 5% 5%;
+}
+/* -------------------------
+--------- About ----------
+------------------------- */
+section.about {
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/optimized/hack20162.JPG");
+  background-position: 0 80%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.this-is {
+  width: 70%;
+  margin-left: 30%;
+  margin-top: 2%;
+  display: none;
+}
+.this-is-content {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  margin-left: 2%;
+  width: 96%;
+  padding: 4% 4% !important;
+}
+.this-is-content h4 {
+  text-align: left;
+  line-height: 2em;
+  color: #fff;
+  font-size: 2.5em;
+}
+/* -------------------------
+--------- FAQ ----------
+------------------------- */
+.faq {
+  background: #222;
+  color: #fff;
+  padding: 5% 0 !important;
+}
+.faq h1 {
+  color: #fff;
+  padding: 20px;
+}
+.faq .section-heading h1 {
+  font-size: 4em;
+}
+.faq-header h3, .faq-cell h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.faq-header, .faq-cell {
+  background: none;
+  color: #fff;
+  padding: 2%;
+  border-radius: 10px;
+  text-align: justify;
+}
+.faq-cell h3 {
+  font-size: 3em;
+}
+.faq-cell p {
+  font-size: 3em;
+  text-align: left;
+}
+.faq-row {
+  height: 50px;
+}
+/* -------------------------
+--------- Sponsors----------
+------------------------- */
 .sponsors {
-  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("/img/hack2016.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("/img/optimized/hack2016.jpg");
   background-position: 0 25%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-
-.btn-reg {
-  border: 2px solid #fff;
-  color: #fff !important;
-  margin-bottom: 15%;
-}
 .btn-sp {
   border: 2px solid #fff;
   color: #fff !important;
-  width: 20%;
-  margin-left: 40%;
+  margin-left: 25%;
 }
-.btn-reg, .btn-sp {
-  background: none;
-  border-radius: 10px;
-  padding: 15px 60px;
-  font-size: 1.5em;
-  outline: none !important;
-}
-
-.btn-reg:hover {
-  background: rgba(173, 58, 62, 0.8);
-  color: #fff;
-  border: 2px solid rgba(173, 58, 62, 0.8);
-}
-.btn-reg:active {
-  background: rgba(135, 45, 48, 0.8);
-  color: #fff;
-}
-
-.overlay {
-  position: fixed;
-  background: rgba(0,0,0,0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-}
+/* -------------------------
+--------- Register----------
+------------------------- */
 section.register {
   position: fixed;
   width: 60%;
@@ -197,14 +197,74 @@ section.register {
   z-index: 99999;
   margin-top: 10%;
 }
-
-/* ------- */
+.btn-reg:hover {
+  background: rgba(173, 58, 62, 0.8);
+  color: #fff;
+  border: 2px solid rgba(173, 58, 62, 0.8);
+}
+.btn-reg:active {
+  background: rgba(135, 45, 48, 0.8);
+  color: #fff;
+}
+.btn-reg {
+  border: 2px solid #fff;
+  color: #fff !important;
+  margin-bottom: 15%;
+}
+.btn-reg, .btn-sp {
+  background: none;
+  border-radius: 10px;
+  padding: 15px 60px;
+  width: 50%;
+  height: 3em;
+  font-size: 3em;
+  outline: none !important;
+}
+/* -------------------------
+--------- Misc----------
+------------------------- */
 @keyframes marquee {
   from {left: -40%;}
   to {left: 100%;}
 }
-
 @font-face {
   font-family: 'Adam CG';
   src: url('/css/fonts/acg.otf');
+}
+@media (min-width: 1024px) {
+  .full {
+    height: 100vh;
+  }
+  .faq-cell p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .faq-cell h3 {
+    font-size: 24px;
+  }
+  .faq .section-heading h1  {
+    font-size: 36px;
+  }
+  .this-is {
+    display: block;
+  }
+  .this-is-content {
+    width: 48%;
+  }
+  .this-is-content h4 {
+    font-size: 18px;
+  }
+  .btn-reg, .btn-sp {
+    width: auto;
+    height: auto;
+    font-size: 1.5em;
+  }
+  .btn-sp {
+    width: 20%;
+    margin-left: 40%;
+  }
+  .logo {
+    width: 40%;
+    margin: 10% 30% 0 30%;
+  }
 }
