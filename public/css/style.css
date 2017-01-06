@@ -1,6 +1,6 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: rgba(37,37,37,1);
+  background: rgba(60,60,60,1);
 }
 
 a {
@@ -10,7 +10,29 @@ a:link , a:visited, a:hover, a.active  {
     text-decoration: none;
 }
 
+.faq {
+  background: #333;
+  color: #fff;
+}
+.faq h1 {
+  color: #fff;
+  padding: 20px;
+}
 
+.faq-header h3, .faq-cell h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.faq-header, .faq-cell {
+  background: #333;
+  color: #fff;
+  padding: 2%;
+  border-radius: 10px;
+  text-align: justify;
+}
+.faq-row {
+  height: 50px;
+}
 .container {
   width: 100%;
   padding: 0;
@@ -38,10 +60,30 @@ nav a {
 /* ------------------ */
 section {
     padding: 150px 60px;
+    background: #fff;
 }
 .section-heading {
     color: #262625;
     text-align: center;
+}
+.this-is h1 {
+  color: #fff;
+  text-align: right;
+  width: 50%;
+  font-size: 10em;
+  float: left;
+}
+.this-is-content {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  margin-left: 2%;
+  width: 48%;
+  margin-top: 5%;
+  padding: 4% 4% !important;
+}
+.this-is-content h4 {
+  text-align: left;
+  line-height: 2em;
+  color: #fff;
 }
 .section-lead {
     margin: 30px 0;
@@ -52,10 +94,14 @@ section {
     padding: 20px;
 }
 section.about {
-    background-color: #fff;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/hack20161.jpg");
+  background-position: 0 80%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
-
-
 /* - */
 .circuit {
   position: absolute;
@@ -74,8 +120,8 @@ section.about {
   width: 40%;
   height: 100%;
   position: absolute;
-  /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(173, 58, 62, 1), rgba(0,0,0,0));*/
-  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));
+  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(173, 58, 62, 1), rgba(0,0,0,0));
+  /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));*/
   z-index: -999;
   animation-name: marquee;
   animation-duration: 13s;
@@ -83,6 +129,7 @@ section.about {
 }
 .full {
   padding: 100px 0;
+  height: 100%;
   text-align: center;
   color: white;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
@@ -90,6 +137,65 @@ section.about {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+.sponsors {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("/img/hack2016.jpg");
+  background-position: 0 -150px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.btn-reg {
+  border: 2px solid #fff;
+  color: #fff !important;
+  margin-bottom: 15%;
+}
+.btn-sp {
+  border: 2px solid #fff;
+  color: #fff !important;
+  width: 20%;
+  margin-left: 40%;
+}
+.btn-reg, .btn-sp {
+  background: none;
+  border-radius: 10px;
+  padding: 15px 60px;
+  height: 5%;
+  font-size: 1.5em;
+  outline: none !important;
+}
+
+.btn-reg:hover {
+  background: rgba(173, 58, 62, 0.8);
+  color: #fff;
+  border: 2px solid rgba(173, 58, 62, 1);
+}
+.btn-reg:active {
+  background: rgba(135, 45, 48, 0.8);
+  color: #fff;
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+section.register {
+  position: fixed;
+  width: 60%;
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding: 100px;
+  margin-left: 20%;
+  z-index: 99999;
+  margin-top: 10%;
 }
 
 /* ------- */

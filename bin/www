@@ -4,9 +4,16 @@
  * Module dependencies.
  */
 
-var app = require('../app');
 var debug = require('debug')('hackridge:server');
-var http = require('http');
+var http  = require('http');
+var db    = require('../db');
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    console.log('The Mongo Hamsters are running!');
+});
+
+var app = require('../app')(db);
 
 /**
  * Get port from environment and store in Express.
