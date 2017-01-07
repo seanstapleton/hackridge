@@ -3,7 +3,7 @@
     width: 100%;
     color: #3E454C;
 }
-#about, #schedule {
+#about, #schedule, #location {
     height: 96%;
     display: table;
 }
@@ -18,12 +18,15 @@
     padding: 60px;
     background-color: #FF9E9E;
 }
-
+#location {
+    padding-top: 60px;
+}
 #faq {
     padding-top: 60px;
     background-color: #BBE5FD;
 }
 #team {
+    padding-top: 60px;
     background-color: #BDE5B8;
 }
 #contact {
@@ -36,6 +39,12 @@
     padding-top: 15px;
     margin: 20px 0;
     background-color: #FFFFFF;
+}
+
+
+/* ===== Map Styles ===== */
+#map {
+    width: 1500px;
 }
 
 
