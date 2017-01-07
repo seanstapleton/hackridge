@@ -2,10 +2,14 @@ body {
     background-color: #fff;
     color: #333;
 }
+.logo {
+  width: 90%;
+}
 .intro-body {
   height: 100vh;
   background: linear-gradient(rgba(229,153,146,0.8),rgba(229,153,146,0.8)), url("/img/optimized/busyhacking.jpg");
 }
+
 .intro {
   padding: 0 !important;
 }
@@ -20,7 +24,7 @@ body {
 .card-content p {
   margin: 0;
 }
-#apply, #schedule, #team {
+#schedule, #team {
   display: none !important;
 }
 /* ===== Section Styles ===== */
@@ -103,6 +107,11 @@ body {
     padding: 50px 0;
   }
 }
+@media (min-width: 968px) {
+  .logo {
+    width: 60%;
+  }
+}
 
 
 /* ===== Team Styles ===== */
@@ -121,5 +130,5 @@ body {
 
 
 footer {
-    background-color: #1D2024;
+    background-color: #3E454C;
 }
