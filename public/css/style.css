@@ -44,10 +44,10 @@ body {
 #apply { background-color: #FF8282; }
 #faq {
   background: linear-gradient(rgba(132,208,253,0.5),rgba(132,208,253,0.5)), url("/img/optimized/hack20162.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  -o-background-size: 100%;
 }
 #team { background-color: #A5E59C; }
 #sponsor {
