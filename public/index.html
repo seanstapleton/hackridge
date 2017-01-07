@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     </head>
 <body>
-    <nav>
+    <nav ng-controller="NavController" ng-class="{sticky: scroll>0, unsticky: scroll==0}">
         <div class="navt">
           <button type="button" class="navbar-toggle">
             <span class="sr-only">Toggle navigation</span>
@@ -16,11 +16,12 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <ul class="nav">
-            <li><a>Home</a></li>
-            <li><a>FAQ</a></li>
-            <li><a>Sponsors</a></li>
-            <li><a>Apply</a></li>
+        <ul>
+            <li><a ng-click="st('#')">Home</a></li>
+            <li><a ng-click="st('about')">About</a></li>
+            <li><a ng-click="st('faq')">FAQ</a></li>
+            <li><a ng-click="st('sponsors')">Sponsors</a></li>
+            <li><a ng-click="st('contact')">Contact</a></li>
         </ul>
     </nav>
 
@@ -32,6 +33,7 @@
     <script src="/lib/angular/angular.min.js"></script>
     <script src='/lib/angular/angular-route.min.js'></script>
     <script type="text/javascript" src="/controllers/app.js"></script>
+    <script type="text/javascript" src="/lib/angularscroll/angularscroll.min.js"></script>
   </body>
   <script>
 

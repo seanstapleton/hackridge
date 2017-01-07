@@ -42,6 +42,16 @@ section {
 }
 
 /* -------------------------
+------- Navigation ---------
+------------------------- */
+nav ul {
+  font-family: 'Adam CG';
+}
+nav a:hover {
+  color: rgba(173, 58, 62, 0.8);
+}
+
+/* -------------------------
 --------- Launch ----------
 ------------------------- */
 nav ul {
@@ -55,8 +65,8 @@ nav li {
 }
 nav a {
   color: #fff;
-  /*font-size: 18px;*/
-  font-size: 2em;
+  font-size: 1em;
+  cursor: pointer;
 }
 .mlh {
   position: absolute;
@@ -91,6 +101,7 @@ nav a {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -999;
 }
 .full {
   height: 80vh;
@@ -101,6 +112,12 @@ nav a {
 .logo {
   width: 90%;
   margin: 40% 5% 5% 5%;
+}
+.hr-title {
+  font-family: 'Adam CG';
+  font-size: 5em;
+  text-align: center;
+  margin: 0;
 }
 /* -------------------------
 --------- About ----------
@@ -221,6 +238,31 @@ section.register {
   outline: none !important;
 }
 /* -------------------------
+--------- Sticky ----------
+------------------------- */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sticky ul {
+  background: rgba(255,255,255,0.8);
+  -webkit-transition: background 1s; /* Safari */
+  transition: background 1s;
+}
+.sticky a {
+  color: #000;
+}
+.sticky, .sticky ul {
+  width: 100%;
+}
+.unsticky, .unsticky ul {
+  width: 100%;
+  background: none;
+  -webkit-transition: background 1s; /* Safari */
+  transition: background 1s;
+}
+/* -------------------------
 --------- Misc----------
 ------------------------- */
 @keyframes marquee {
@@ -234,6 +276,7 @@ section.register {
 @media (min-width: 1024px) {
   .full {
     height: 100vh;
+    padding: 100px 60px 150px 60px;
   }
   .faq-cell p {
     font-size: 14px;
@@ -263,8 +306,11 @@ section.register {
     width: 20%;
     margin-left: 40%;
   }
+  .btn-reg {
+    margin-top: 5%;
+  }
   .logo {
     width: 40%;
-    margin: 10% 30% 0 30%;
+    margin: 1% 30% 0 30%;
   }
 }

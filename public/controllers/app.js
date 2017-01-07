@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('hackridge', ['ngRoute']);
+  var app = angular.module('hackridge', ['ngRoute', 'duScroll']);
   app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
@@ -9,6 +9,20 @@
       .otherwise({redirectTo: '/'});
 
       $locationProvider.html5Mode(true);
+  }]);
+
+  app.controller('NavController', ['$scope', '$document', '$window', function($scope, $document, $window) {
+    $scope.st = function(id) {
+      var offset = 0;
+      var duration = 1500;
+      var element = angular.element(document.getElementById(id));
+      $document.scrollToElementAnimated(element, offset, duration);
+    }
+    $document.on('scroll', function() {
+      $scope.$apply(function() {
+        $scope.scroll = $window.scrollY;
+      });
+    });
   }]);
 
   app.controller('LandingController', ['$scope', '$http', function($scope, $http) {
@@ -36,5 +50,6 @@
           $scope.regMessage = (res.data.success) ? "Success! We'll send you some more information about our awesome event later!" : "Sorry, our hamsters are off duty (servers down). Please email info@hackridge.io instead.";
         });
     }
+
   }]);
 }());
