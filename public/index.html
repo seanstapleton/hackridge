@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=0.5; minimum-scale=1; maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -35,7 +35,7 @@
     <link href='/css/style.css' rel='stylesheet'>
 </head>
 
-<body ng-app='hackridge' id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body ng-app='hackridge' id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="MainController">
 
 
     <!-- Navigation -->
@@ -94,17 +94,11 @@
 
     <script src='/lib/angular/angular-route.min.js'></script>
     <script type="text/javascript" src="/controllers/app.js"></script>
+    <script type="text/javascript" src="/controllers/main.js"></script>
+    <script type="text/javascript" src="/controllers/faq.js"></script>
     <script type="text/javascript" src="/lib/angularscroll/angularscroll.min.js"></script>
     <script>
         AOS.init();
-        $(document).ready(function(){
-            $('.card-header').each(function() {
-                var $this = $(this);
-                $this.on("click", function () {
-                    $('#'+$this.attr('id')+'_ans').slideToggle();
-                });
-            });
-        });
     </script>
 </body>
 

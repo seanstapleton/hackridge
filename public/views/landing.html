@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="animated slideInLeft brand-heading">Hack//Ridge</h1>
-                    <img class='animated zoomIn' src="/img/HackRidgeLogo.png" height='300px'/>
+                    <img class='animated zoomIn' src="/img/optimized/HackRidgeLogo.png" height='300px'/>
                     <h1 class='animated slideInRight'>2017</h1>
                 </div>
             </div>
@@ -58,7 +58,7 @@
     <div class='row'>
         <div class='col-md-5 col-md-offset-1'>
             <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class='card' ng-repeat="pair in data" ng-if='$index % 2 == 0'>
-                <div class='card-header text-center clearfix' id='q{{$index}}'>
+                <div class='card-header text-center clearfix' id='q{{$index}}' ng-click="collapse('#q'+$index+'_ans')">
                     <h5 class='pull-left'>{{pair.question}}<h5>
                     <i class="btn-faq pull-right fa fa-chevron-down" aria-hidden="true" style='font-size: 20px'></i>
                 </div>
@@ -69,7 +69,7 @@
         </div>
         <div class='col-md-5'>
             <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class='card' ng-repeat="pair in data" ng-if='$index % 2 == 1'>
-                <div class='card-header text-center clearfix' id='q{{$index}}'>
+                <div class='card-header text-center clearfix' id='q{{$index}}' ng-click="collapse('#q'+$index+'_ans')">
                     <h5 class='pull-left'>{{pair.question}}<h5>
                     <i class="btn-faq pull-right fa fa-chevron-down" aria-hidden="true" style='font-size: 20px'></i>
                 </div>
@@ -88,6 +88,7 @@
 <section id='location' class='container text-center'>
     <h2 class='text-center'>Location</h2>
     <p><b>Hack//Ridge</b> is held at Maine South High School. More information about check-in coming soon.</p>
+    <div class="map-overlay" ng-click="mapClick()" ng-if="!mapClickability"></div>
     <iframe data-aos="zoom-in" data-aos-delay='200' width="90%" height="400px"
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC4o3Lx7_ycl1fg-Y8NDilas_ZsruAONGQ&q=Maine+South" allowfullscreen>

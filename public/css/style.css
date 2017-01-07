@@ -1,8 +1,24 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #fff;
+    color: #333;
 }
 .intro-body {
   height: 100vh;
+  background: linear-gradient(rgba(229,153,146,0.8),rgba(229,153,146,0.8)), url("/img/optimized/busyhacking.jpg");
+}
+.intro {
+  padding: 0 !important;
+}
+.map-overlay {
+  width: 90%;
+  height: 400px;
+  position: absolute;
+  z-index: 999;
+  margin-left: 5%;
+  background: none;
+}
+.card-content p {
+  margin: 0;
 }
 #apply, #schedule, #team {
   display: none !important;
