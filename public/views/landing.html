@@ -1,4 +1,4 @@
-<div ng-controller="LandingController" class='container'>
+<div class='container'>
   <div class="overlay" ng-if="reg || sp" ng-click="untog()"></div>
   <section class='register container' ng-if="reg || sp">
   	<div class='section-heading'>
@@ -28,7 +28,7 @@
     <h1 style="font-family:'Adam CG'; margin-top: 10px;">2017</h1>
     <button ng-click="rtog()" class="btn btn-reg">Join</button>
 	</section>
-	<section class='about container' id="about" style="padding: 50px; position: relative; z-index: -3">
+	<section class='about container' id="about" style="padding: 50px; position: relative; z-index: -3" elpos>
     <div class="row">
       <div class="col-md-6">
   		    <img class="this-is" src="/img/optimized/thisis.png"/>
@@ -38,7 +38,7 @@
   		</div>
     </div>
 	</section>
-	<section class='faq container' id="faq">
+	<section class='faq container' id="faq" elpos>
 		<div class='section-heading'>
 			<h1>Frequently Asked Questions</h1>
 		</div>
@@ -89,7 +89,7 @@
 		</div>
 </div>
 </section>
-<section class='sponsors container' style="padding: 100px 0" id="sponsors">
+<section class='sponsors container' style="padding: 100px 0" id="sponsors" elpos>
 	<button ng-click="stog()" class="btn btn-sp">Sponsor Us</button>
 </section>
 </div>

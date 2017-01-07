@@ -262,6 +262,9 @@ section.register {
   -webkit-transition: background 1s; /* Safari */
   transition: background 1s;
 }
+.active {
+  background: #ccc;
+}
 /* -------------------------
 --------- Misc----------
 ------------------------- */

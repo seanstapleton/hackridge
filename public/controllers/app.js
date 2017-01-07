@@ -3,29 +3,14 @@
   app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/views/landing.html',
-        controller: 'LandingController'
+        templateUrl: '/views/landing.html'
       })
       .otherwise({redirectTo: '/'});
 
       $locationProvider.html5Mode(true);
   }]);
 
-  app.controller('NavController', ['$scope', '$document', '$window', function($scope, $document, $window) {
-    $scope.st = function(id) {
-      var offset = 0;
-      var duration = 1500;
-      var element = angular.element(document.getElementById(id));
-      $document.scrollToElementAnimated(element, offset, duration);
-    }
-    $document.on('scroll', function() {
-      $scope.$apply(function() {
-        $scope.scroll = $window.scrollY;
-      });
-    });
-  }]);
-
-  app.controller('LandingController', ['$scope', '$http', function($scope, $http) {
+  app.controller('MainController', ['$scope', '$document', '$window', function($scope, $document, $window) {
     $scope.regData = {};
     $scope.sponsorData = {};
     $scope.reg = false;
@@ -51,5 +36,37 @@
         });
     }
 
+    $scope.st = function(id) {
+      var offset = 0;
+      var duration = 1500;
+      var element = angular.element(document.getElementById(id));
+      $document.scrollToElementAnimated(element, offset, duration);
+    }
+    $scope.sTop = function() {
+      var offset = 0;
+      var duration = 1500;
+      $document.scrollTopAnimated(offset, duration);
+    }
+    $document.on('scroll', function() {
+      $scope.$apply(function() {
+        $scope.scroll = $window.scrollY;
+      });
+    });
   }]);
+
+  app.directive('elpos', function($window) {
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs, controller) {
+        var page = angular.element(window);
+        page.bind('scroll', function() {
+          var scrollTop = element[0].getBoundingClientRect().top;
+          var scrollBottom = $window.innerHeight - element[0].getBoundingClientRect().bottom;
+          scope.$apply(function() {
+            scope[attrs.id] = {top: scrollTop, bottom: scrollBottom};
+          });
+        });
+      }
+    }
+  });
 }());

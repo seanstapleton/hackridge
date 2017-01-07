@@ -6,8 +6,8 @@
         <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="/css/style.css"/>
     </head>
-<body>
-    <nav ng-controller="NavController" ng-class="{sticky: scroll>0, unsticky: scroll==0}">
+<body ng-controller="MainController">
+    <nav ng-class="{sticky: scroll>0, unsticky: scroll==0}">
         <div class="navt">
           <button type="button" class="navbar-toggle">
             <span class="sr-only">Toggle navigation</span>
@@ -17,10 +17,10 @@
           </button>
         </div>
         <ul>
-            <li><a ng-click="st('#')">Home</a></li>
-            <li><a ng-click="st('about')">About</a></li>
-            <li><a ng-click="st('faq')">FAQ</a></li>
-            <li><a ng-click="st('sponsors')">Sponsors</a></li>
+            <li><a ng-click="sTop()">Home</a></li>
+            <li><a ng-click="st('about')" ng-class="{active: about.top < 150}">About</a></li>
+            <li><a ng-click="st('faq')" ng-class="{active: faq.top > 0 && faq.top < 150}">FAQ</a></li>
+            <li><a ng-click="st('sponsors')" ng-class="{active: Math.abs(sponsors.bottom) < 1}">Sponsors</a></li>
             <li><a ng-click="st('contact')">Contact</a></li>
         </ul>
     </nav>
