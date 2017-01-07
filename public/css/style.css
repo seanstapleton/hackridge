@@ -1,3 +1,4 @@
+/* ===== Section Styles ===== */
 #about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact {
     width: 100%;
     color: #3E454C;
@@ -6,41 +7,39 @@
     height: 96%;
     display: table;
 }
-#about {
+#about, #schedule, #location, #sponsor {
+    background-color: #FFFFFF;
+}
 
-    background-color: black;
-    /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-attachment: fixed;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+#apply, #faq, #team, #contact {
+    color: white;
 }
 #apply {
+    padding: 60px;
     background-color: #FF9E9E;
-    color: white;
 }
-#schedule {
-    background-color: #FFFFFF;
-}
+
 #faq {
+    padding-top: 60px;
     background-color: #BBE5FD;
-    color: white;
-}
-#location {
-    background-color: #FFFFFF;
 }
 #team {
     background-color: #BDE5B8;
-    color: white;
-}
-#sponsor {
-    background-color: #FFFFFF;
 }
 #contact {
     background-color: #3E454C;
-    color: white;
 }
+
+/* ===== FAQ Styles ===== */
+.card {
+    color: #3E454C;
+    padding-top: 15px;
+    margin: 20px 0;
+    background-color: #FFFFFF;
+}
+
+
+
 .contect-ssection {
 
 }
