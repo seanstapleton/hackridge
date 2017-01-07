@@ -1,6 +1,12 @@
 body {
     background-color: #FFFFFF;
 }
+.intro-body {
+  height: 100vh;
+}
+#apply, #schedule, #team {
+  display: none !important;
+}
 /* ===== Section Styles ===== */
 #about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact {
     width: 100%;
@@ -10,7 +16,7 @@ body {
     background-color: #FFFFFF;
 }
 #about, #schedule, #location, #faq, #team {
-    height: 96%;
+    height: 96vh;
     display: table;
 }
 #about ,#schedule{
@@ -20,9 +26,24 @@ body {
     color: white;
 }
 #apply { background-color: #FF8282; }
-#faq { background-color: #84D0FD; }
+#faq {
+  background: linear-gradient(rgba(132,208,253,0.5),rgba(132,208,253,0.5)), url("/img/optimized/hack20162.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 #team { background-color: #A5E59C; }
-#contact { background-color: #3E454C; }
+#sponsor {
+  background: linear-gradient(rgba(165,229,156,0.5),rgba(165,229,156,0.5)), url("/img/optimized/hack2016.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#contact {
+  background-color: #3E454C;
+}
 
 /* ===== FAQ Styles ===== */
 #faq p{
