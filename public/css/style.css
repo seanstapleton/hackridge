@@ -1,0 +1,88 @@
+body {
+    background-color: #FFFFFF;
+}
+/* ===== Section Styles ===== */
+#about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact {
+    width: 100%;
+    color: #3E454C;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: #FFFFFF;
+}
+#about, #schedule, #location, #faq, #team {
+    height: 96%;
+    display: table;
+}
+#about ,#schedule{
+    padding-top: 200px;
+}
+#apply, #faq, #team, #contact {
+    color: white;
+}
+#apply { background-color: #FF8282; }
+#faq { background-color: #84D0FD; }
+#team { background-color: #A5E59C; }
+#contact { background-color: #3E454C; }
+
+/* ===== FAQ Styles ===== */
+#faq p{
+    font-size: 18px;
+}
+.card {
+
+
+}
+.card-header {
+    padding: 20px 20px 0 20px;
+    margin: 20px 0 0 0;
+    color: #3E454C;
+    background-color: #FFFFFF;
+}
+.card-content {
+    color: #FFFFFF;
+    border: 5px white solid;
+    font-size: 20px;
+    padding: 10px;
+}
+.btn-faq {
+    font-size: 30px;
+}
+.btn-faq:hover,
+.btn-faq:focus {
+    color: #FF5454;
+}
+
+/* ===== Map Styles ===== */
+#map {
+    width: 1500px;
+}
+
+.contect-ssection {
+
+}
+
+@media (min-width: 767px) {
+  .content-ssection {
+    padding: 50px 0;
+  }
+}
+
+
+/* ===== Team Styles ===== */
+.team-members {
+    width: 100px;
+}
+.team-title {
+    margin: 0;
+    font-size: 20px;
+}
+.team-text {
+    margin: 5px;
+    font-size: 15px;
+}
+
+
+
+footer {
+    background-color: #1D2024;
+}
