@@ -1,70 +1,78 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact {
+    width: 100%;
+    color: #3E454C;
 }
-
-a {
-  color: #00B7FF;
-}
-a:link , a:visited, a:hover, a.active  {
-    text-decoration: none;
-}
-
-
-.container {
-  width: 100%;
-  padding: 0;
-}
-
-.mlh {
-  position: absolute;
-  right: 100px;
-}
-
-
-nav ul {
-  position: absolute;
-  left: 0px;
-}
-nav li {
-  list-style-type: none;
-  float: left;
-  padding: 20px;
-}
-nav a {
-  color: #fff;
-  font-size: 18px;
-}
-/* ------------------ */
-section {
-    padding: 150px 60px;
-}
-.section-heading {
-    color: #262625;
-    text-align: center;
-}
-.section-lead {
-    margin: 30px 0;
-    font-size: 4em;
-}
-.section-content {
-    color: #262625;
-    padding: 20px;
-}
-section.about {
-    background-color: #ecdfd5;
-}
-
-
-/* - */
-.full {
+#about {
+    height: 96%;
     display: table;
+    background-color: black;
+    /*background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background-attachment: fixed;*/
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+#apply {
+    background-color: #FF9E9E;
+    color: white;
+}
+#schedule {
+    background-color: #FFFFFF;
+}
+#faq {
+    background-color: #BBE5FD;
+    color: white;
+}
+#location {
+    background-color: #FFFFFF;
+}
+#team {
+    background-color: #BDE5B8;
+    color: white;
+}
+#sponsor {
+    background-color: #FFFFFF;
+}
+#contact {
+    background-color: #3E454C;
+    color: white;
+}
+.contect-ssection {
+
+}
+@media (min-width: 767px) {
+  .content-ssection {
+    padding: 50px 0;
+  }
+}
+.circuit {
+  background: url('/img/circuit.png');
+  background-attachment: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
+  z-index: -99;
+}
+.glow {
+  width: 40%;
+  height: 100%;
+  /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(173, 58, 62, 1), rgba(0,0,0,0));*/
+  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));
+  background-attachment: absolute;
+  animation-name: marquee;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
+.full {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url('/img/welcome4.png') no-repeat bottom center scroll;
-  background-color: black;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
