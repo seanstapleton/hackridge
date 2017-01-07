@@ -68,7 +68,7 @@ body {
 }
 
 
-
+/* ===== Team Styles ===== */
 .team-members {
     width: 100px;
 }
@@ -79,4 +79,10 @@ body {
 .team-text {
     margin: 5px;
     font-size: 15px;
+}
+
+
+
+footer {
+    background-color: #1D2024;
 }
