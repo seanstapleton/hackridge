@@ -242,7 +242,7 @@
 <!-- Sponsor Section -->
 <section id='sponsor' class='container text-center'>
     <h2>Sponsor</h2>
-    <h5 ng-click="toggleemail()">Send us an email</h5>
+    <h5 ng-click="toggleemail()" style="cursor: pointer;">Send us an email</h5>
 </section>
 
 <!-- Contact Section -->
@@ -269,9 +269,11 @@
 
 <!-- Email Section -->
 <div class="overlay fade" ng-if="email" ng-click="toggleemail()"></div>
-<section id="email" ng-if="email" class="animated slideInUp ang-slide-out-down" >
+<section id="email" ng-if="email" class="animated slideInUp ang-slide-out-down" style="top: {{(scroll + 20) + 'px'}}">
+  <div style="position: relative;"><p ng-click="toggleemail()" class="ex">X</p></div>
   <h2 style="text-align: center">Send Us an Email</h2>
-  <form id="contactForm">
+  <div class="row">
+  <form id="contactForm" class="col-md-6">
     <input type="text" ng-model="contactData.fname" class="" placeholder="first name"/>
     <input type="text" ng-model="contactData.lname" class="" placeholder="last name"/>
     <input type="text" ng-model="contactData.email" class="" placeholder="email"/>
@@ -279,7 +281,7 @@
     <textarea ng-model="contactData.message" class="" placeholder="message"></textarea>
     <button type="submit" class="btn">Send</button>
   </form>
-  <div id="more-info">
+  <div id="more-info" class="col-md-6">
     <div class="bar"></div>
     <p>info@hackridge.io</p>
     <br/>
@@ -293,4 +295,5 @@
     <img class="icon" src="/img/icons/insta-icon.svg"/>
     <p style="margin-left: 10px; float: left;">@hackridge</p>
   </div>
+</div>
 </section>
