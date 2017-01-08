@@ -6,9 +6,14 @@
     $scope.sponsorData = {};
     $scope.reg = false;
     $scope.sp = false;
+    $scope.email = false;
 
     $scope.mapClick = function() {
       $scope.mapClickability = !$scope.mapClickability;
+    }
+
+    $scope.toggleemail = function() {
+      $scope.email = !$scope.email;
     }
 
     $scope.collapse = function(str) {

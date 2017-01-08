@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('hackridge', ['ngRoute', 'duScroll']);
+  var app = angular.module('hackridge', ['ngRoute', 'ngAnimate', 'duScroll']);
   app.config(['$routeProvider','$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
