@@ -269,11 +269,12 @@
 
 <!-- Email Section -->
 <div class="overlay fade" ng-if="email" ng-click="toggleemail()"></div>
-<section id="email" ng-if="email" class="animated slideInUp ang-slide-out-down" style="top: {{(scroll + 20) + 'px'}}">
+<section id="email" ng-if="email" class="animated slideInUp ang-slide-out-down">
   <div style="position: relative;"><p ng-click="toggleemail()" class="ex">X</p></div>
+<div class="sponsor-lightbox" ng-if="!emailResponse">
   <h2 style="text-align: center">Send Us an Email</h2>
   <div class="row">
-  <form id="contactForm" class="col-md-6">
+  <form id="contactForm" class="col-md-6" ng-submit="sendEmail()">
     <input type="text" ng-model="contactData.fname" class="" placeholder="first name"/>
     <input type="text" ng-model="contactData.lname" class="" placeholder="last name"/>
     <input type="text" ng-model="contactData.email" class="" placeholder="email"/>
@@ -296,4 +297,6 @@
     <p style="margin-left: 10px; float: left;">@hackridge</p>
   </div>
 </div>
+</div>
+<h2 style="text-align: center" ng-if="emailResponse">{{emailResponse}}</h2>
 </section>

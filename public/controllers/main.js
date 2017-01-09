@@ -1,12 +1,13 @@
 (function() {
   var app = angular.module('hackridge');
-  app.controller('MainController', ['$scope', '$document', '$window', function($scope, $document, $window) {
+  app.controller('MainController', ['$scope', '$document', '$window', '$http', function($scope, $document, $window, $http) {
     $scope.mapClickability = false;
     $scope.regData = {};
     $scope.sponsorData = {};
     $scope.reg = false;
     $scope.sp = false;
     $scope.email = false;
+    $scope.contactData = {};
 
     $scope.mapClick = function() {
       $scope.mapClickability = !$scope.mapClickability;
@@ -18,6 +19,13 @@
 
     $scope.collapse = function(str) {
       $(str).slideToggle();
+    }
+
+    $scope.sendEmail = function() {
+      $http.post('/backendServices/sendEmail', $scope.contactData)
+        .then(function(res) {
+          $scope.emailResponse = (res.data.success) ? "Thank you! We'll get back to you soon." : "Whoops. The hamsters must be tired (servers down). Please try emailing us instead at info@hackridge.io!";
+        });
     }
 
     $scope.rtog = function() {

@@ -8,8 +8,11 @@ body {
 .intro-body {
   height: 100vh;
   background: linear-gradient(rgba(229,153,146,0.8),rgba(229,153,146,0.8)), url("/img/optimized/busyhacking.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
-
 .intro {
   padding: 0 !important;
 }
@@ -60,6 +63,7 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  color: #fff;
 }
 #contact {
   background-color: #3E454C;
@@ -121,6 +125,9 @@ body {
   #email {
     padding: 100px !important;
   }
+  #more-info {
+    display: block !important;
+  }
 }
 
 
@@ -147,7 +154,7 @@ footer {
   width: 40%;
   height: 96vh;
   position: absolute;
-  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(173, 58, 62, 0.15), rgba(0,0,0,0));
+  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0,0,0,0.2), rgba(0,0,0,0));
   /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));*/
   z-index: -999;
   animation-name: marquee;
@@ -167,7 +174,8 @@ footer {
 }
 
 #email {
-  position: absolute;
+  position: fixed;
+  top: 5vh;
   z-index: 9999;
   width: 90%;
   margin-left: 5%;
@@ -183,6 +191,7 @@ footer {
 }
 #more-info {
   padding: 0 2%;
+  display: none;
 }
 #more-info p {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -248,7 +257,8 @@ div.bar:not(:first-child) {
 #contactForm input:focus, #contactForm textarea:focus {
   background: #75736F;
   color: #fff;
-  transition: background 1s;
+  transition: background 0.5s;
+  transition-timing-function: ease-in;
 }
 #contactForm button {
   padding: 20px 100px;
