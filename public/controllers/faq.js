@@ -32,7 +32,7 @@
           },
           {
               "question":"Can I reuse a previous project?",
-              "answer":"Haha, NO! You cannot use anything that you've started working on before the event. You need to scratch. However, Open Source code is free game. "
+              "answer":"Haha, NO! You cannot use anything that you've started working on before the event. You need to start from scratch. However, Open Source code is free game. "
           }
       ];
   }]);
