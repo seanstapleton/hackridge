@@ -266,6 +266,8 @@ div.bar:not(:first-child) {
   background: rgba(229,153,146,1);
   color: #fff;
 }
+
+
 input:focus::-webkit-input-placeholder {
 color: #fff !important;
 }
