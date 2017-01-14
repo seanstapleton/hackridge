@@ -22,6 +22,10 @@
     "font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
     "aos": "^2.1.1",
-    "angular": "^1.6.1"
+    "angular": "^1.6.1",
+    "moment": "momentjs#^2.17.1"
+  },
+  "resolutions": {
+    "humanize-duration": "^3.10.0"
   }
 }
