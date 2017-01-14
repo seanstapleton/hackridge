@@ -6,12 +6,4 @@
         }, 1000,0);
 
     }]);
-
-
-    countdown.setLabels(
-    	'second | minute | hour | day | month',
-    	'seconds | minutes | hours | days | months',
-    	' and ',
-    	', ',
-    	'now');
 }());
