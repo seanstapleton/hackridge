@@ -31,7 +31,7 @@ body {
   display: none !important;
 }
 /* ===== Section Styles ===== */
-#about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact {
+#about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact, #countdown {
     width: 100%;
     color: #3E454C;
     padding: 20px;
@@ -47,6 +47,11 @@ body {
 }
 #apply, #faq, #team, #contact {
     color: white;
+}
+#countdown {
+    background-color: #151719;
+    color: white;
+    padding: 70px;
 }
 #apply { background-color: #FF8282; }
 #faq {
