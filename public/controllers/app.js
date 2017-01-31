@@ -5,6 +5,10 @@
       .when('/', {
         templateUrl: '/views/landing.html'
       })
+      .when('/apply', {
+        templateUrl: '/views/apply.html',
+        controller: 'ApplyController'
+      })
       .otherwise({redirectTo: '/'});
 
       $locationProvider.html5Mode(true);

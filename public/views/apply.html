@@ -1,0 +1,36 @@
+<form id="applyForm" class="col-md-12" ng-submit="sendApplication()">
+
+  <section ng-if="scope.page == 0">
+    <input type="text" ng-model="applicationData.fname" class="" placeholder="first name"/>
+    <input type="text" ng-model="applicationData.lname" class="" placeholder="last name"/>
+    <input type="text" ng-model="applicationData.email" class="" placeholder="email"/>
+    <input type="text" ng-model="applicationData.school" class="" placeholder="school"/>
+  </section>
+
+  <section ng-if="scope.page == 1">
+    <p>Do you have a team?</p>
+    <input type="text" ng-model="applicationData.teamname" class="" placeholder="team name"/>
+    <input type="number" ng-model="applicationData.teamsize" class="" placeholder="Number of Team Members"/>
+    <p>Please List Member Names</p>
+    <input type="text" ng-model="applicationData.member1" class="" placeholder="member name"/>
+    <select>
+      <option disabled selected>T-Shirt Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>XL</option>
+      <option>Other</option>
+    </select>
+
+    <input type="text" ng-model="applicationData.experience" class="" placeholder="hacking experience"/>
+    <p>Do you plan to bring a desktop computer? (We prefer laptops!)</p>
+    <p>Do you have any food allergies?</p>
+
+    <button type="submit" class="btn">Send</button>
+  </section>
+
+  <div class="app-pagination" style="width: 100%;">
+    <img src="/img/icons/left-arrow.svg"/>
+    <img src="/img/icons/right-arrow.svg"/>
+  </div>
+</form>
