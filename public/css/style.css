@@ -245,12 +245,28 @@ div.bar:not(:first-child) {
   animation: slideOutDown;
   animation-duration: 1s;
 }
+.ang-slide-out-left.ng-leave {
+  animation: slideOutLeft;
+  animation-duration: 1s;
+}
+.ang-slide-out-right.ng-leave {
+  animation: slideOutRight;
+  animation-duration: 1s;
+}
+.ang-slide-in-right.ng-enter {
+  animation: slideInRight;
+  animation-duration: 1s;
+}
+.ang-slide-in-left.ng-enter {
+  animation: slideInRight;
+  animation-duration: 1s;
+}
 .icon {
   width: 10%;
   float: left;
   margin-left: 10px;
 }
-#contactForm input, #contactForm textarea {
+#contactForm input, #contactForm textarea, #applyForm input, #applyForm textarea {
   border-radius: none;
   border: none;
   padding: 15px 10px;
@@ -259,7 +275,7 @@ div.bar:not(:first-child) {
   outline: none;
   width: 100%;
 }
-#contactForm input:focus, #contactForm textarea:focus {
+#contactForm input:focus, #contactForm textarea:focus, #applyForm input:focus, #applyForm textarea:focus {
   background: #75736F;
   color: #fff;
   transition: background 0.5s;
@@ -271,7 +287,43 @@ div.bar:not(:first-child) {
   background: rgba(229,153,146,1);
   color: #fff;
 }
-
+.applyContainer {
+  width: 60%;
+  margin-left: 20%;
+  overflow: auto;
+  color: #fff;
+}
+#applyForm h2 {
+  margin: 0;
+  font-family: Open Sans;
+  text-transform: none;
+  font-size: 1em;
+}
+#applyForm option {
+  color: #fff;
+  border-radius: 0;
+}
+#applyForm {
+  padding-top: 150px;
+}
+#applyForm section {
+  width: 60%;
+  margin-left: 20%;
+  min-height: 50vh;
+}
+#applyForm select {
+  height: 50px;
+}
+#applyForm h4 {
+  text-align: center;
+  color: #ccc;
+}
+#applyForm label {
+  color: #fff;
+}
+#applyForm input[type=checkbox] {
+  padding: 50px;
+}
 
 input:focus::-webkit-input-placeholder {
 color: #fff !important;
