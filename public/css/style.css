@@ -1,3 +1,4 @@
+/* ===== Intro Styles ===== */
 body {
     background-color: #fff;
     color: #333;
@@ -24,10 +25,39 @@ body {
 .card-content p {
   margin: 0;
 }
+footer {
+    background-color: #3E454C;
+}
+.logo {
+  height: 40vh;
+  width: auto;
+}
+.logo-container {
+  position: relative;
+  width: 100%;
+}
+#title, #date {
+  position: absolute;
+}
+#title {
+  text-align: center;
+  margin-top: calc(28.4851vh - 0.85em);
+  font-size: 2.5em !important;
+  width: 100%;
+  display: block;
+}
+#date {
+  margin-top: 31.7858vh;
+  font-size: 0.5em;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+/* ===== Section Styles ===== */
 #apply, #schedule, #team {
   display: none !important;
 }
-/* ===== Section Styles ===== */
 #about, #apply, #schedule, #faq, #location, #team, #sponsor, #contact, #countdown {
     width: 100%;
     color: #3E454C;
@@ -77,15 +107,11 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
-
-/* ===== FAQ Styles ===== */
 #faq p{
     font-size: 18px;
 }
-.card {
 
-
-}
+/* ===== FAQ Styles ===== */
 .card-header {
     padding: 20px 20px 0 20px;
     margin: 20px 0 0 0;
@@ -111,10 +137,7 @@ body {
     width: 1500px;
 }
 
-.contect-ssection {
-
-}
-
+/* ===== Mobile Styles ===== */
 @media (min-width: 767px) {
   .content-ssection {
     padding: 50px 0;
@@ -122,7 +145,21 @@ body {
 }
 @media (min-width: 968px) {
   .logo {
-    width: 60%;
+    height: 60vh;
+    width: auto;
+  }
+  #title {
+    margin-top: calc(40.38vh - 0.65em);
+    font-size: 3em !important;
+    width: 100%;
+    display: block;
+  }
+  #date {
+    margin-top: 47.585vh;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    display: block;
   }
   #email {
     padding: 100px !important;
@@ -131,7 +168,6 @@ body {
     display: block !important;
   }
 }
-
 
 /* ===== Team Styles ===== */
 .team-members {
@@ -146,12 +182,7 @@ body {
     font-size: 15px;
 }
 
-
-
-footer {
-    background-color: #3E454C;
-}
-
+/* ===== Animation ====== */
 .glow {
   width: 40%;
   height: 96vh;
@@ -175,6 +206,7 @@ footer {
   to {left: 100%;}
 }
 
+/* === Sponsor Modal ==== */
 #email {
   position: fixed;
   top: 5vh;
@@ -224,6 +256,8 @@ div.bar:not(:first-child) {
   z-index: 9999;
   opacity: 1;
 }
+
+/* ===== Angular Animations ====*/
 .fade.ng-enter {
   transition: 1s linear all;
   opacity: 0;
@@ -258,6 +292,8 @@ div.bar:not(:first-child) {
   animation: slideInRight;
   animation-duration: 1s;
 }
+
+/* ==== Forms ====*/
 .icon {
   width: 10%;
   float: left;
@@ -282,12 +318,6 @@ div.bar:not(:first-child) {
   padding: 20px 100px;
   width: 100%;
   background: rgba(229,153,146,1);
-  color: #fff;
-}
-.applyContainer {
-  width: 60%;
-  margin-left: 20%;
-  overflow: auto;
   color: #fff;
 }
 #applyForm h2 {
@@ -325,18 +355,12 @@ div.bar:not(:first-child) {
   color: #fff;
   padding: 20px 0;
 }
-.alert-box {
+.applyContainer {
   width: 60%;
-  border: solid 2px #E16C5E;
-  color: #E16C5E;
-  background: #E1B6BB;
-  font-size: 1em;
   margin-left: 20%;
+  overflow: auto;
+  color: #fff;
 }
-.alert-box h2 {
-  padding: 5px 20px !important;
-}
-
 input:focus::-webkit-input-placeholder {
 color: #fff !important;
 }
@@ -360,33 +384,4 @@ color: #fff !important;
 }
 textarea:focus:-ms-input-placeholder {
 color: #fff !important;
-}
-
-
-
-
-.logo {
-  height: 60vh;
-  width: auto;
-}
-.logo-container {
-  position: relative;
-  width: 100%;
-}
-#title, #date {
-  position: absolute;
-}
-#title {
-  text-align: center;
-  margin-top: calc(40.38vh - 0.65em);
-  font-size: 3em !important;
-  width: 100%;
-  display: block;
-}
-#date {
-  margin-top: 47.585vh;
-  font-size: 1em;
-  text-align: center;
-  width: 100%;
-  display: block;
 }
