@@ -14,6 +14,46 @@ module.exports = function(db) {
       });
     });
 
+    var sendEmail = function(data) {
+      var result;
+      var fullname = data.fname + " " + data.lname;
+      var smtpTransporter = nodemailer.createTransport({
+        service: 'Mailgun',
+        auth: {
+          user: process.env.emailUser,
+          pass: process.env.emailPass
+        }
+      });
+      var message = {
+        from: 'hackridge.io',
+        to: 'sstapleton425@s207.org',
+        subject: 'New Applicant: ' + fullname,
+        text: JSON.stringify(data)
+      };
+
+      smtpTransporter.sendMail(message, function(err, info) {
+         if (err) {
+             console.log(err);
+             result = false;
+         } else {
+            result = true;
+         }
+      });
+
+      return result;
+    }
+
+    router.post('/registerApplicant', function(req, res) {
+      var data = req.body;
+      console.log(data);
+      var attendee = new attendeesSchema({data: data});
+      attendee.save(function(err, att) {
+        sendEmail(data);
+        if (err) res.send({success: false, err: err});
+        else res.send({success: true})
+      });
+    });
+
     router.post('/sendEmail', function(req, res) {
       var contactData = req.body;
       var fullname = contactData.fname + " " + contactData.lname;

@@ -2,9 +2,6 @@ body {
     background-color: #fff;
     color: #333;
 }
-.logo {
-  width: 90%;
-}
 .intro-body {
   height: 100vh;
   background: linear-gradient(rgba(229,153,146,0.8),rgba(229,153,146,0.8)), url("/img/optimized/busyhacking.jpg");
@@ -322,7 +319,22 @@ div.bar:not(:first-child) {
   color: #fff;
 }
 #applyForm input[type=checkbox] {
-  padding: 50px;
+  width: auto !important;
+}
+#applyForm h2 {
+  color: #fff;
+  padding: 20px 0;
+}
+.alert-box {
+  width: 60%;
+  border: solid 2px #E16C5E;
+  color: #E16C5E;
+  background: #E1B6BB;
+  font-size: 1em;
+  margin-left: 20%;
+}
+.alert-box h2 {
+  padding: 5px 20px !important;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -348,4 +360,33 @@ color: #fff !important;
 }
 textarea:focus:-ms-input-placeholder {
 color: #fff !important;
+}
+
+
+
+
+.logo {
+  height: 60vh;
+  width: auto;
+}
+.logo-container {
+  position: relative;
+  width: 100%;
+}
+#title, #date {
+  position: absolute;
+}
+#title {
+  text-align: center;
+  margin-top: calc(40.38vh - 0.65em);
+  font-size: 3em !important;
+  width: 100%;
+  display: block;
+}
+#date {
+  margin-top: 47.585vh;
+  font-size: 1em;
+  text-align: center;
+  width: 100%;
+  display: block;
 }

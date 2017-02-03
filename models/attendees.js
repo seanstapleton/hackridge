@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var attendeesSchema = new Schema({
-    email: String
+    data: Object
 });
 
 module.exports = mongoose.model('Attendee', attendeesSchema);
