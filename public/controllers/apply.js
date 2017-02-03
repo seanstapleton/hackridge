@@ -21,10 +21,10 @@
       var page = "#app-page-" + $scope.page + " .required";
       var count = 0;
       $(page).each(function(idx) {
-        if ($(this).val().length < 1) {
+        if (!$(this).val() || $(this).val().length < 1) {
           $(this).css("border", "2px solid #E16C5E");
           count++;
-        }
+        } else $(this).css("border", "none");
       });
       if (count > 0) return false;
       else return true;

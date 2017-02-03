@@ -15,14 +15,16 @@
         <input required type="text" ng-model="applicationData.lname" class="required" placeholder="last name"/>
         <input required type="text" ng-model="applicationData.email" class="required" placeholder="email"/>
         <input required type="text" ng-model="applicationData.school" class="required" placeholder="school"/>
-        <select class="form-control">
-          <option disabled selected>T-Shirt Size</option>
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-          <option value="xl">XL</option>
-          <option value="other">Other</option>
-        </select>
+        <div class="select-container">
+          <select class="form-control required">
+            <option disabled selected>T-Shirt Size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xl">XL</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
       </section>
     </div>
     <div class="item">
