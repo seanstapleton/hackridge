@@ -105,7 +105,7 @@
 <!-- Application Section -->
 <section id="apply" ng-controller="ApplyController">
 <div style="background: #3E454C; min-height: 100vh;">
-  <form id="applyForm" class="col-md-12" ng-submit="sendApplication()" name="applicationForm" novalidate>
+  <form id="applyForm" class="col-md-12" name="applicationForm" novalidate>
 
     <h1 style="color: #fff; text-align: center">Hack Ridge Registration</h1>
 
@@ -166,7 +166,7 @@
           <div class="form-group"><label class="checkbox-inline"><input required type="checkbox" class="form-control required" ng-model="applicationData.mlhterms"/>I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</label></div>
 
           <h2 ng-repeat="msg in appWarnings" class="app-warnings">{{msg}}</h2>
-          <button type="submit" class="btn">Send</button>
+          <button type="submit" class="btn" ng-click="sendApplication()">Send</button>
         </section>
       </div>
     </div>
