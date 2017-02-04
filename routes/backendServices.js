@@ -14,6 +14,8 @@ module.exports = function(db) {
       });
     });
 
+    console.log(process.env.emailUser);
+
     var sendEmail = function(data) {
       var result;
       var fullname = data.fname + " " + data.lname;
