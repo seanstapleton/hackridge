@@ -2,6 +2,7 @@ module.exports = function(db) {
     var express         = require('express');
     var router          = express.Router();
     var nodemailer      = require('nodemailer');
+    var mg              = require('nodemailer-mailgun-transport');
     var mongoose        = require('mongoose');
     var attendeesSchema  = require('../models/attendees');
 
@@ -14,20 +15,20 @@ module.exports = function(db) {
       });
     });
 
-    console.log(process.env.emailUser);
-
     var sendEmail = function(data) {
+
+      var auth = {
+        auth: {
+          api_key: process.env.apikey,
+          domain: process.env.domain
+        }
+      }
+
       var result;
       var fullname = data.fname + " " + data.lname;
-      var smtpTransporter = nodemailer.createTransport({
-        service: 'Mailgun',
-        auth: {
-          user: process.env.emailUser,
-          pass: process.env.emailPass
-        }
-      });
+      var smtpTransporter = nodemailer.createTransport(mg(auth));
       var message = {
-        from: 'hackridge.io',
+        from: 'sean@hackridge.io',
         to: 'sstapleton425@s207.org',
         subject: 'New Applicant: ' + fullname,
         text: JSON.stringify(data)
