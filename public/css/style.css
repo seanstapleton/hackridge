@@ -137,38 +137,6 @@ footer {
     width: 1500px;
 }
 
-/* ===== Mobile Styles ===== */
-@media (min-width: 767px) {
-  .content-ssection {
-    padding: 50px 0;
-  }
-}
-@media (min-width: 968px) {
-  .logo {
-    height: 60vh;
-    width: auto;
-  }
-  #title {
-    margin-top: calc(40.38vh - 0.65em);
-    font-size: 3em !important;
-    width: 100%;
-    display: block;
-  }
-  #date {
-    margin-top: 47.585vh;
-    font-size: 1em;
-    text-align: center;
-    width: 100%;
-    display: block;
-  }
-  #email {
-    padding: 100px !important;
-  }
-  #more-info {
-    display: block !important;
-  }
-}
-
 /* ===== Team Styles ===== */
 .team-members {
     width: 100px;
@@ -331,11 +299,10 @@ div.bar:not(:first-child) {
   border-radius: 0;
 }
 #applyForm {
-  padding-top: 150px;
+  padding-top: 15vh;
 }
 #applyForm section {
-  width: 60%;
-  margin-left: 20%;
+  width: 100%;
   min-height: 50vh;
 }
 #applyForm select {
@@ -361,6 +328,23 @@ div.bar:not(:first-child) {
   overflow: auto;
   color: #fff;
 }
+.validation-msg {
+  margin: 0;
+  padding: 5px 0 !important;
+}
+.app-pagination {
+  width: 100%;
+  margin-top: 5vh;
+  overflow: auto;
+}
+.app-pagination img {
+  height: 10vh;
+}
+.app-pagination p {
+  line-height: 10vh;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 input:focus::-webkit-input-placeholder {
 color: #fff !important;
 }
@@ -384,4 +368,74 @@ color: #fff !important;
 }
 textarea:focus:-ms-input-placeholder {
 color: #fff !important;
+}
+
+/* ===== Mobile Styles ===== */
+@media (min-width: 767px) {
+  .content-ssection {
+    padding: 50px 0;
+  }
+}
+@media (min-width: 968px) {
+  .logo {
+    height: 60vh;
+    width: auto;
+  }
+  #title {
+    margin-top: calc(40.38vh - 0.65em);
+    font-size: 3em !important;
+    width: 100%;
+    display: block;
+  }
+  #date {
+    margin-top: 47.585vh;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  #email {
+    padding: 100px !important;
+  }
+  #more-info {
+    display: block !important;
+  }
+  #applyForm h2 {
+    font-size: 1em;
+    padding: 20px 0;
+  }
+  #applyForm {
+    padding-top: 150px;
+  }
+  #applyForm section {
+    width: 60%;
+    margin-left: 20%;
+    min-height: 50vh;
+  }
+  #applyForm select {
+    height: 50px;
+  }
+  #applyForm .btn {
+    width: 40%;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 30%;
+  }
+  .validation-msg {
+    margin-left: 20% !important;
+  }
+  .app-pagination {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 0;
+    overflow: auto;
+  }
+  .app-pagination img {
+    height: 10vh;
+  }
+  .app-pagination p {
+    line-height: 10vh;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }

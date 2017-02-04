@@ -17,20 +17,41 @@
       $('#appCarousel').carousel("prev");
       $scope.filled = true;
     }
-    $scope.checkPage = function() {
-      var page = "#app-page-" + $scope.page + " .required";
+    $scope.checkPage = function(p) {
+      var page;
+      if (p) page = "#app-page-" + (p-1) + " .required";
+      else page = "#app-page-" + $scope.page + " .required";
       var count = 0;
       $(page).each(function(idx) {
-        if (!$(this).val() || $(this).val().length < 1) {
-          $(this).css("border", "2px solid #E16C5E");
+        var self = $(this);
+        if (!self.val() || self.val().length < 1) {
+          self.css("border", "2px solid #E16C5E");
           count++;
-        } else $(this).css("border", "none");
+        } else if (self.prop("type") == "checkbox") {
+          if (!self.is(":checked")) {
+            self.parent().css("border", "2px solid #E16C5E");
+            count++;
+          } else {
+            self.parent().css("border", "none");
+          }
+        } else self.css("border", "none");
       });
+      console.log(page, " is ", count == 0);
       if (count > 0) return false;
       else return true;
     }
 
     $scope.sendApplication = function() {
+      var msgs = [];
+      var pages = ["Basic Information", "Team Information", "Logistics", "Confirmations"];
+      for (var i = 0; i < 4; i++) {
+        console.log("round: ", i);
+        if (!$scope.checkPage(i+1)) {
+          msgs.push("Please complete the " + pages[i] + " page.");
+          $scope.appWarnings = msgs;
+        }
+      }
+      if ($scope.appWarnings) return;
       var formData = $scope.applicationData;
       $http.post('/backendServices/registerApplicant', formData);
     }
