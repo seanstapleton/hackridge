@@ -54,7 +54,12 @@
       }
       if ($scope.appWarnings) return;
       var formData = $scope.applicationData;
-      $http.post('/backendServices/registerApplicant', formData);
+      $http.post('/backendServices/registerApplicant', formData)
+        .then(function(res) {
+          $("#applyForm").css("display", "none");
+          if (res.data.success) $scope.appFormMessage = "Hack Yeah! Thanks for signing up for Hack Ridge.";
+          else $scope.appFormMessage = "Whoops! The hamsters are tired (servers down). Please try again later or email info@hackridge.io to sign up!";
+        });
     }
   }]);
 }());

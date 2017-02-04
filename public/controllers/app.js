@@ -6,8 +6,7 @@
         templateUrl: '/views/landing.html'
       })
       .when('/apply', {
-        templateUrl: '/views/apply.html',
-        controller: 'ApplyController'
+        templateUrl: '/views/apply.html'
       })
       .otherwise({redirectTo: '/'});
 

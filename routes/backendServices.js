@@ -34,9 +34,9 @@ module.exports = function(db) {
       smtpTransporter.sendMail(message, function(err, info) {
          if (err) {
              console.log(err);
-             result = false;
+            result = {success: false, err: err};
          } else {
-            result = true;
+            result = {success: true};
          }
       });
 
@@ -45,12 +45,15 @@ module.exports = function(db) {
 
     router.post('/registerApplicant', function(req, res) {
       var data = req.body;
-      console.log(data);
+      console.log("data: ", data);
       var attendee = new attendeesSchema({data: data});
       attendee.save(function(err, att) {
-        sendEmail(data);
-        if (err) res.send({success: false, err: err});
-        else res.send({success: true})
+        var email = sendEmail(data);
+        if (err) {
+          if (email.success) res.send({success: true});
+          else res.send({success: false, dberror: err, emailerror: email.err});
+        }
+        else res.send({success: true});
       });
     });
 
