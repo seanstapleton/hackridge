@@ -19,10 +19,11 @@
     }
     $scope.checkPage = function(p) {
       var page;
-      if (p) page = "#app-page-" + (p-1) + " .required";
-      else page = "#app-page-" + $scope.page + " .required";
+      if (p) page = "#app-page-" + (p-1);
+      else page = "#app-page-" + $scope.page;
+      var reqs =  page + " .required";
       var count = 0;
-      $(page).each(function(idx) {
+      $(reqs).each(function(idx) {
         var self = $(this);
         if (!self.val() || self.val().length < 1) {
           self.css("border", "2px solid #E16C5E");
@@ -36,7 +37,7 @@
           }
         } else self.css("border", "none");
       });
-      console.log(page, " is ", count == 0);
+      if ($(page).find("input[type=radio]").length > 0 && !$(page).find("input[type=radio]").is(':checked')) count++;
       if (count > 0) return false;
       else return true;
     }

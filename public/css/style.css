@@ -305,6 +305,15 @@ div.bar:not(:first-child) {
   width: 100%;
   min-height: 50vh;
 }
+#applyForm .btn {
+  width: 90%;
+  padding: 20px;
+  margin-left: 5%;
+}
+h2.app-warnings {
+  color: #E19D94;
+  padding: 5px 0 !important;
+}
 #applyForm select {
   height: 50px;
 }
@@ -315,8 +324,14 @@ div.bar:not(:first-child) {
 #applyForm label {
   color: #fff;
 }
-#applyForm input[type=checkbox] {
+#applyForm input[type=checkbox], #applyForm input[type=radio] {
   width: auto !important;
+}
+#applyForm input[type=radio] {
+  height: 20px;
+}
+#applyForm label {
+  line-height: 20px;
 }
 #applyForm h2 {
   color: #fff;
