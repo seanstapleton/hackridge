@@ -308,6 +308,7 @@ div.bar:not(:first-child) {
   width: 90%;
   padding: 20px;
   margin-left: 5%;
+  background: lightgrey;
 }
 #apply {
   overflow: auto;
