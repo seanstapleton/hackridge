@@ -174,7 +174,7 @@ footer {
 }
 
 /* === Sponsor Modal ==== */
-#email {
+#email, .thankyou {
   position: fixed;
   top: 5vh;
   z-index: 9999;
@@ -302,7 +302,6 @@ div.bar:not(:first-child) {
 }
 #applyForm section {
   width: 100%;
-  min-height: 50vh;
 }
 #applyForm .btn {
   width: 90%;
@@ -338,6 +337,25 @@ h2.app-warnings {
 }
 #applyForm input[type=radio] {
   height: 20px;
+}
+.btn-join {
+  background: rgba(238,238,238,1);
+  border: 2px solid #333;
+  border-radius: 5px;
+  text-align: center;
+  width: 20%;
+  margin-left: 40%;
+  color: #333;
+  cursor: pointer !important;
+}
+.btn-join:hover {
+  background: rgba(200,200,200,1);
+}
+.thankyou, .overlay {
+  display: none;
+}
+.thankyou {
+  padding: 100px 0;
 }
 #applyForm label {
   line-height: 20px;
@@ -434,7 +452,6 @@ color: #fff !important;
   #applyForm section {
     width: 60%;
     margin-left: 20%;
-    min-height: 50vh;
   }
   #applyForm select {
     height: 50px;
@@ -444,6 +461,38 @@ color: #fff !important;
     padding: 20px;
     margin-top: 100px;
     margin-left: 30%;
+  }
+  #applyForm p {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: lightgrey;
+    font-size: 1em;
+  }
+  #applyForm h4 {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  #applyForm p {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  .radio-align label{
+    float: left;
+    margin-left: 10%;
+    display: block;
+  }
+  .radio-align h2 {
+    float: left;
+    padding: 0 !important;
+    width: 50%;
+    height: auto;
+  }
+  .radio-align {
+    padding: 20px 0;
+  }
+  input[type=checkbox], input[type=radio] {
+    height: auto;
   }
   .validation-msg {
     margin-left: 20% !important;

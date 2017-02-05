@@ -4,25 +4,13 @@
     $scope.page = 0;
     $scope.filled = true;
 
-    $scope.incPage = function() {
-      console.log($scope.checkPage());
-      if (!$scope.checkPage()) { $scope.filled = false; return; }
-      $scope.page = ($scope.page + 1) % 4;
-      $('#appCarousel').carousel("next");
-      $scope.filled = true;
-    }
-    $scope.decPage = function() {
-      if (!$scope.checkPage()) { $scope.filled = false; return; }
-      $scope.page = ($scope.page + 3) % 4;
-      $('#appCarousel').carousel("prev");
-      $scope.filled = true;
-    }
     $scope.checkPage = function(p) {
       var page;
       if (p) page = "#app-page-" + (p-1);
       else page = "#app-page-" + $scope.page;
       var reqs =  page + " .required";
       var count = 0;
+      console.log(page);
       $(reqs).each(function(idx) {
         var self = $(this);
         if (!self.val() || self.val().length < 1) {
@@ -44,19 +32,20 @@
 
     $scope.sendApplication = function() {
       var msgs = [];
-      var pages = ["Basic Information", "Team Information", "Logistics", "Confirmations"];
-      for (var i = 0; i < 4; i++) {
-        console.log("round: ", i);
+      var pages = ["Basic Information", "Logistics", "Confirmations"];
+      for (var i = 0; i < 3; i++) {
+        console.log("round: ", i, "decision: ", !$scope.checkPage(i+1));
         if (!$scope.checkPage(i+1)) {
           msgs.push("Please complete the " + pages[i] + " page.");
-          $scope.appWarnings = msgs;
         }
       }
-      if ($scope.appWarnings) return;
+      $scope.appWarnings = msgs;
+      if ($scope.appWarnings.length > 0) return;
       var formData = $scope.applicationData;
       $http.post('/backendServices/registerApplicant', formData)
         .then(function(res) {
-          $("#applyForm").css("display", "none");
+          $(".overlay").css("display", "block");
+          $(".thankyou").css("display","block");
           if (res.data.success) $scope.appFormMessage = "Hack Yeah! Thanks for signing up for Hack Ridge.";
           else $scope.appFormMessage = "Whoops! The hamsters are tired (servers down). Please try again later or email info@hackridge.io to sign up!";
         });
