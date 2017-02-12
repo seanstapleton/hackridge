@@ -1,6 +1,6 @@
 (function() {
   var app = angular.module('hackridge');
-  app.controller('MainController', ['$scope', '$document', '$window', '$http', function($scope, $document, $window, $http) {
+  app.controller('MainController', ['$location', '$scope', '$document', '$window', '$http', function($location, $scope, $document, $window, $http) {
     $scope.mapClickability = false;
     $scope.regData = {};
     $scope.sponsorData = {};
@@ -8,6 +8,18 @@
     $scope.sp = false;
     $scope.email = false;
     $scope.contactData = {};
+
+    $scope.$on('$locationChangeStart', function(event) {
+      console.log($location.path());
+        if ($location.path() != "/") {
+          $('.apply-link').css("display","block");
+          $('.home-link').css("display","none");
+        }
+        else {
+          $('.apply-link').css("display","none");
+          $('.home-link').css("display","block");
+        }
+    });
 
     $scope.mapClick = function() {
       $scope.mapClickability = !$scope.mapClickability;
