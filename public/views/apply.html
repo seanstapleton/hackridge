@@ -10,12 +10,12 @@
       <div>
         <h4>Basic Information</h4>
         <section id="app-page-0">
-          <p>Student Info</p>
+          <p style="color: #fff">Student Info</p>
           <input required name="firstname" type="text" ng-model="applicationData.fname" class="required" placeholder="first name"/>
           <input required name="lastname" type="text" ng-model="applicationData.lname" class="required" placeholder="last name"/>
           <input required name="email" type="text" ng-model="applicationData.email" class="required" placeholder="email"/>
           <input required name="school" type="text" ng-model="applicationData.school" class="required" placeholder="school"/>
-          <p>Parent/Guardian Info</p>
+          <p style="color: #fff">Parent/Guardian Info</p>
           <input required name="parentfirstname" type="text" ng-model="applicationData.pfname" class="required" placeholder="first name"/>
           <input required name="parentlastname" type="text" ng-model="applicationData.plname" class="required" placeholder="last name"/>
           <input required name="emergencynumber" type="tel" ng-model="applicationData.emnum" class="required" placeholder="emergency phone number"/>
@@ -26,7 +26,7 @@
       <div>
         <h4>Logistics</h4>
         <section id="app-page-1">
-          <p>Team Info</p>
+          <p style="color: #fff">Team Info</p>
           <div class="form-group radio-align app-backdrop">
             <h2>Do you have a team?</h2>
             <input required name="team" type="radio" ng-model="applicationData.team" ng-value="true" class="form-control" style="float:left; height: auto; margin-left: 50px;"><span style="float: left; margin-left: 20px;color: #fff;font-size: 1em">Yes</span>
@@ -49,12 +49,12 @@
           <textarea name="allergies" ng-model="applicationData.foodallergies" class="" placeholder="do you have any food allergies?"></textarea>
           <div class="select-container">
             <select class="form-control required" ng-model="applicationData.shirtsize" ng-init="applicationData.shirtsize='none'">
-              <option selected value="none">T-Shirt Size</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="xl">XL</option>
-              <option value="other">Other</option>
+              <option style="color: #000" selected value="none">T-Shirt Size</option>
+              <option style="color: #000" value="small">Small</option>
+              <option style="color: #000" value="medium">Medium</option>
+              <option style="color: #000" value="large">Large</option>
+              <option style="color: #000" value="xl">XL</option>
+              <option style="color: #000" value="other">Other</option>
             </select>
           </div>
         </section>
