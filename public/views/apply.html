@@ -33,11 +33,6 @@
             <input required name="team" type="radio" ng-model="applicationData.team" ng-value="false" class="form-control" style="float:left; height: auto; margin-left: 50px;"><span style="float: left; margin-left: 20px;color: #fff;font-size: 1em">No</span>
             </table>
           </div>
-          <div class="form-group" ng-if="applicationData.team">
-            <input required name="teamname" type="text" ng-model="applicationData.teamname" class="required" placeholder="team name"/>
-            <input required name="teamsize" type="number" ng-model="applicationData.teamsize" class="required" placeholder="Number of Team Members"/>
-            <textarea name="teammembers" ng-model="applicationData.members" class="" placeholder="please list member names here"/>
-          </div>
           <div class="form-group radio-align" ng-if="!applicationData.team">
             <h2>Do you want help finding a team?</h2>
             <input name="teamhelp" required type="radio" ng-model="applicationData.teamhelp" ng-value="true" class="form-control" style="float:left; height: auto; margin-left: 50px;"><span style="float: left; margin-left: 20px;color: #fff;font-size: 1em">Yes</span>
