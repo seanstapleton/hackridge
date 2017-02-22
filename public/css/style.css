@@ -58,16 +58,19 @@ footer {
 #schedule, #team {
   display: none !important;
 }
-#about, #schedule, #faq, #location, #team, #sponsor, #contact, #countdown {
+#promo, #about, #schedule, #faq, #location, #team, #sponsor, #contact, #countdown {
     width: 100%;
     color: #3E454C;
     padding: 20px;
     padding-top: 60px;
     background-color: #FFFFFF;
 }
-#about, #schedule, #location, #faq, #team {
+#about, #schedule, #location, #promo,  #faq, #team {
     height: 96vh;
     display: table;
+}
+#promo {
+  background: #151719;
 }
 #about ,#schedule{
     padding-top: 200px;
@@ -89,12 +92,13 @@ footer {
 }
 #team { background-color: #A5E59C; }
 #sponsor {
-  background: linear-gradient(rgba(165,229,156,0.5),rgba(165,229,156,0.5)), url("/img/optimized/hack2016.jpg");
+  /*background: linear-gradient(rgba(165,229,156,0.5),rgba(165,229,156,0.5)), url("/img/optimized/hack2016.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-  color: #fff;
+  -o-background-size: cover;*/
+  background: #fff;
+  color: #333;
 }
 #contact {
   background-color: #3E454C;
@@ -174,11 +178,19 @@ footer {
 }
 
 /* === Sponsor Modal ==== */
-.sponsor-logos img {
-  width: 25%;
+.sponsor-logos {
+  margin-bottom: 50px;
 }
-.sponsor-logos li {
-  float: left;
+.sponsor-logos tr {
+  width: 100%;
+}
+.sponsor-logos td {
+  width: 25%;
+  margin-left: 2.5%;
+}
+.sponsor-logos img {
+  max-width: 80%;
+  vertical-align: middle;
 }
 #email, .thankyou {
   position: fixed;
@@ -356,6 +368,15 @@ h2.app-warnings {
 }
 .btn-join:hover {
   background: rgba(200,200,200,1);
+}
+.btn-apply {
+  background: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 20px 40px;
+  color: #333 !important;
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 20px !important;
 }
 .thankyou, .overlay {
   display: none;
