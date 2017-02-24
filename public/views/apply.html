@@ -41,9 +41,9 @@
           </div>
           <p>Personal Info</p>
           <input name="experience" required type="text" ng-model="applicationData.experience" class="required" placeholder="hacking/programming experience"/>
-          <textarea style="color: #333" name="allergies" ng-model="applicationData.awareness" class="" placeholder="how did you hear about us?"></textarea>
-          <textarea style="color: #333" name="allergies" ng-model="applicationData.foodallergies" class="" placeholder="do you have any food allergies?"></textarea>
-          <textarea style="color: #333" name="medical" ng-model="applicationData.medical" class="" placeholder="do you have any medical conditions that we should be aware of?"></textarea>
+          <textarea name="allergies" ng-model="applicationData.awareness" class="" placeholder="how did you hear about us?"></textarea>
+          <textarea name="allergies" ng-model="applicationData.foodallergies" class="" placeholder="do you have any food allergies?"></textarea>
+          <textarea name="medical" ng-model="applicationData.medical" class="" placeholder="do you have any medical conditions that we should be aware of?"></textarea>
           <div class="select-container">
             <select class="form-control required" ng-model="applicationData.shirtsize" ng-init="applicationData.shirtsize='none'">
               <option style="color: #000" selected value="none">T-Shirt Size</option>
