@@ -1,0 +1,110 @@
+[{
+  "day": "Saturday, March 4",
+  "agenda": [
+    {
+      "name": "Check-in",
+      "time": 630,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Opening Ceremony",
+      "time": 675,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Hacking Begins",
+      "time": 720,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Workshop: 'Gotta Code Em All' (MakeSchool)",
+      "time": 900,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "Workshop: TBD",
+      "time": 960,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "Workshop: iOS 'Tip Calculator'",
+      "time": 1020,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Dinner",
+      "time": 1080,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Open Gym",
+      "time": 1140,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "MLH Slideshow Kareoke",
+      "time": 1260,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "Late Night Movie",
+      "time": 1380,
+      "loc": "Dance Studio"
+    }
+  ]
+},
+{
+  "day": "Saturday, March 5",
+  "agenda": [
+    {
+      "name": "NERF Capture the Flag",
+      "time": 0,
+      "loc": "Field House"
+    },
+    {
+      "name": "Ultimate Frisbee",
+      "time": 60,
+      "loc": "Field House"
+    },
+    {
+      "name": "Ice Cream Sundae Bar",
+      "time": 120,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Super Smash Tourney",
+      "time": 240,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "Breakfast",
+      "time": 510,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Hacking Closes",
+      "time": 720,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Lunch",
+      "time": 735,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Judging Begins",
+      "time": 765,
+      "loc": "Back Gym"
+    },
+    {
+      "name": "Finalist Presentations",
+      "time": 810,
+      "loc": "Cafe"
+    },
+    {
+      "name": "Awards Ceremony/Closing Speeches",
+      "time": 840,
+      "loc": "Cafe"
+    }
+  ]
+}]

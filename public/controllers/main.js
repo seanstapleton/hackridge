@@ -1,5 +1,12 @@
 (function() {
   var app = angular.module('hackridge');
+
+  app.filter('minutesToTime', [function() {
+    return function(min) {
+      return new Date(2017, 4, 3).setSeconds(min*60);
+    }
+  }]);
+
   app.controller('MainController', ['$location', '$scope', '$document', '$window', '$http', function($location, $scope, $document, $window, $http) {
     $scope.mapClickability = false;
     $scope.regData = {};
@@ -8,6 +15,10 @@
     $scope.sp = false;
     $scope.email = false;
     $scope.contactData = {};
+
+    $.getJSON("/data/agenda.json", function(json) {
+      $scope.agendas = json;
+    });
 
     $scope.$on('$locationChangeStart', function(event) {
       console.log($location.path());
