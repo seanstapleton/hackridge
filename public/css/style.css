@@ -435,6 +435,9 @@ h2.app-warnings {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#agenda td, #agenda th {
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 input:focus::-webkit-input-placeholder {
 color: #fff !important;
 }
