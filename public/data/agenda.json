@@ -47,6 +47,11 @@
       "loc": "Back Gym"
     },
     {
+      "name": "TeaLula Matcha Stand",
+      "time": 1260,
+      "loc": "Cafe"
+    },
+    {
       "name": "Late Night Movie",
       "time": 1380,
       "loc": "Dance Studio"
