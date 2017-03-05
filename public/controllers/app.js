@@ -8,6 +8,9 @@
       .when('/apply', {
         templateUrl: '/views/apply.html'
       })
+      .when('/countdown', {
+        templateUrl: '/views/countdown.html'
+      })
       .otherwise({redirectTo: '/'});
 
       $locationProvider.html5Mode(true);

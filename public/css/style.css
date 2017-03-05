@@ -14,6 +14,24 @@ body {
 .intro {
   padding: 0 !important;
 }
+.countdownpage {
+  height: 100vh;
+  background: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+.countdownpage h2, .countdownpage h3 {
+  color: #fff;
+}
+.countdownpage h2 {
+  font-size: 4em !important;
+  width: 80%;
+  margin-left: 10%;
+}
+.countdownpage h3 {
+  font-size: 2em;
+}
 .map-overlay {
   width: 90%;
   height: 400px;
@@ -134,6 +152,14 @@ footer {
 #faq p{
     font-size: 18px;
 }
+#cd-row {
+  background: url('/img/optimized/circuit.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+}
 
 /* ===== FAQ Styles ===== */
 .card-header {
@@ -186,7 +212,25 @@ footer {
   animation-duration: 13s;
   animation-iteration-count: infinite;
 }
+.glow-cd {
+  width: 40%;
+  height: 96vh;
+  position: absolute;
+  background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(255,255,255,0.5), rgba(0,0,0,0));
+  /*background: linear-gradient( to right, rgba(0, 0, 0, 0), rgba(0, 241, 255, 1), rgba(0,0,0,0));*/
+  z-index: -999;
+  animation-name: marquee;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+}
 .glow-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -999;
+}
+.glow-wrapper-cd {
   position: absolute;
   width: 100%;
   height: 100vh;
