@@ -1,0 +1,107 @@
+body {
+  background-color: #111;
+}
+.section-header {
+  font-family: 'Poppins';
+  font-size: 3em;
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px
+}
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px;
+}
+nav a {
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 1.5em;
+}
+#intro {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/img/workshop.JPG");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.logo-med {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: 20px;
+}
+.logo-white {
+  background-image: url("/img/hack_ridge_logo_io_white.svg");
+}
+.logo-black {
+  background-image: url("/img/hack_ridge_logo_io_white.svg");
+}
+#email-list {
+  width: 80%;
+  margin: 0 auto;
+  left: 10%;
+  position: absolute;
+  bottom: 20vh;
+}
+#email-list input {
+  width: 80%;
+  padding: 15px;
+  border: none;
+}
+#email-list button {
+  width: calc(20% - 30px);
+  border-radius: 0;
+  padding: 15px;
+  border: none;
+  margin-left: -4px;
+  margin-top: -2px;
+}
+
+#faq {
+  padding: 100px;
+  background-image: url("/img/paper.png");
+  overflow: auto;
+}
+.faq-container {
+  width: calc(30% - 8px);
+  height: 275px;
+  padding: 20px;
+  background: #eee;
+  float: left;
+  margin-top: 40px;
+  border-left: 8px solid #111;
+}
+.faq-container:not(:nth-child(3n-1)) {
+  margin-left: 5%;
+}
+
+#sponsors {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/img/sponsors.JPG");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  padding: 100px;
+}
+#sponsors h1:first-child {
+  color: #fff;
+}
+.btn-action {
+  margin-top: 40px;
+  padding: 15px;
+  color: #fff !important;
+  font-family: 'Poppins';
+  background-color: #FB605B;
+}
+.btn-action:hover {
+  background-color: #FB7C79;
+}
