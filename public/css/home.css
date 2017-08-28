@@ -24,20 +24,21 @@ nav a {
   font-size: 1.5em;
 }
 #intro {
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/img/workshop.JPG");
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("/img/cafe.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
+  padding-top: 20vh;
 }
 .logo-med {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   display: block;
-  margin-left: 20px;
+  margin-left: calc(50% - 400px);
 }
 .logo-white {
   background-image: url("/img/hack_ridge_logo_io_white.svg");
