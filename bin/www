@@ -6,7 +6,7 @@
 
 var debug = require('debug')('hackridge:server');
 var http  = require('http');
-var db    = require('../db');
+var db    = require('../db'); //.js by default
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
