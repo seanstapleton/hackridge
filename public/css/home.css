@@ -4,9 +4,15 @@ body {
 .section-header {
   font-family: 'Poppins';
   font-size: 3em;
-  text-align: center;
 }
-
+#about .section-header, #sponsors .section-header {
+  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
+  display: inline-block;
+  padding: 0 15px;
+}
+#faq .section-header {
+  text-align: left;
+}
 nav {
   position: absolute;
   top: 0;
@@ -22,23 +28,54 @@ nav a {
   color: #fff;
   font-family: 'Poppins';
   font-size: 1.5em;
+  text-decoration: none !important;
+}
+nav a:hover {
+  color: #ddd;
+}
+.email-signup {
+  display: flex;
+  width: 40%;
+  margin-left: calc(30% + 25px);
+}
+.email-signup input {
+  border-radius: 5px;
+  border: 0;
+  padding: 15px;
+  box-shadow: inset 0 0 5px #222;
+  flex: 1;
+}
+section#sponsors {
+  height: initial;
+}
+section {
+  padding: 80px;
+}
+#about p {
+  padding-left: 40px;
+}
+#about .copy {
+  padding: 80px;
+  line-height: 2em;
 }
 #intro {
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url("/img/cafe.png");
+  background-image: url("/img/background.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 .logo-med {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   display: block;
-  margin-left: calc(50% - 400px);
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: calc(50% - 150px);
 }
 .logo-white {
   background-image: url("/img/hack_ridge_logo_io_white.svg");
@@ -47,14 +84,13 @@ nav a {
   background-image: url("/img/hack_ridge_logo_io_white.svg");
 }
 #email-list {
-  width: 80%;
   margin: 0 auto;
   left: 10%;
   position: absolute;
   bottom: 20vh;
 }
 #email-list input {
-  width: 80%;
+  width: 60%;
   padding: 15px;
   border: none;
 }
@@ -66,35 +102,28 @@ nav a {
   margin-left: -4px;
   margin-top: -2px;
 }
-
-#faq {
-  padding: 100px;
+#about, #sponsors {
   background-image: url("/img/paper.png");
+}
+#faq {
+  background-image: url("/img/background_blue.png");
+  background-size: 300px;
   overflow: auto;
 }
+.faq-container-div {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .faq-container {
-  width: calc(30% - 8px);
+  width: 30%;
   height: 275px;
   padding: 20px;
   background: #eee;
-  float: left;
   margin-top: 40px;
   border-left: 8px solid #111;
-}
-.faq-container:not(:nth-child(3n-1)) {
-  margin-left: 5%;
-}
-
-#sponsors {
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/img/sponsors.JPG");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 40vh;
-  padding: 100px;
-}
-#sponsors h1:first-child {
-  color: #fff;
 }
 .btn-action {
   margin-top: 40px;
