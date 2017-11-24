@@ -1,18 +1,12 @@
 body {
-  background-color: #111;
+  background-color: #eee;
 }
-.section-header {
-  font-family: 'Poppins';
-  font-size: 3em;
+section {
+  padding: 40px;
 }
-#about .section-header, #sponsors .section-header {
-  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
-  display: inline-block;
-  padding: 0 15px;
-}
-#faq .section-header {
-  text-align: left;
-}
+/* -------------------------
+---------- nav -------------
+--------------------------*/
 nav {
   position: absolute;
   top: 0;
@@ -33,10 +27,32 @@ nav a {
 nav a:hover {
   color: #ddd;
 }
+
+/* -------------------------
+--------- headers ----------
+--------------------------*/
+.section-header {
+  font-family: 'Poppins';
+  font-size: 3em;
+  padding: 0 15px;
+  display: inline-block;
+}
+#about .section-header {
+  box-shadow: 0 -0.45em 0 #db655d inset;
+}
+#sponsors .section-header {
+  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
+}
+#faq .section-header {
+  text-align: left;
+}
+
+/* -------------------------
+--------- landing ----------
+--------------------------*/
 .email-signup {
   display: flex;
-  width: 40%;
-  margin-left: calc(30% + 25px);
+  width: 60%;
 }
 .email-signup input {
   border-radius: 5px;
@@ -44,19 +60,6 @@ nav a:hover {
   padding: 15px;
   box-shadow: inset 0 0 5px #222;
   flex: 1;
-}
-section#sponsors {
-  height: initial;
-}
-section {
-  padding: 80px;
-}
-#about p {
-  padding-left: 40px;
-}
-#about .copy {
-  padding: 80px;
-  line-height: 2em;
 }
 #intro {
   background-image: url("/img/background.png");
@@ -83,27 +86,31 @@ section {
 .logo-black {
   background-image: url("/img/hack_ridge_logo_io_white.svg");
 }
-#email-list {
-  margin: 0 auto;
-  left: 10%;
-  position: absolute;
-  bottom: 20vh;
-}
-#email-list input {
-  width: 60%;
-  padding: 15px;
-  border: none;
-}
-#email-list button {
-  width: calc(20% - 30px);
-  border-radius: 0;
-  padding: 15px;
-  border: none;
-  margin-left: -4px;
-  margin-top: -2px;
+
+/* -------------------------
+--------- sections ---------
+--------------------------*/
+#about .copy {
+  padding: 20px 0;
+  line-height: 2em;
+  text-align: justify;
 }
 #about, #sponsors {
   background-image: url("/img/paper.png");
+}
+#sponsors p {
+  font-size: 1.5em;
+  padding: 20px;
+}
+#sponsors a {
+  box-shadow: 0 -0.5em 0 rgba(78,150,226,255) inset;
+  color: #333;
+  padding: 0 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+#sponsors a:first-child {
+  box-shadow: 0 -0.5em 0 #db655d inset;
 }
 #faq {
   background-image: url("/img/background_blue.png");
@@ -111,22 +118,22 @@ section {
   overflow: auto;
 }
 .faq-container-div {
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
 .faq-container {
-  width: 30%;
-  height: 275px;
+  width: 100%;
+  min-height: 275px;
   padding: 20px;
   background: #eee;
-  margin-top: 40px;
+  margin-top: 20px;
   border-left: 8px solid #111;
 }
 .btn-action {
   margin-top: 40px;
+  width: 200px;
   padding: 15px;
   color: #fff !important;
   font-family: 'Poppins';
@@ -134,4 +141,58 @@ section {
 }
 .btn-action:hover {
   background-color: #FB7C79;
+}
+
+footer p {
+  color: #bbb;
+  text-align: center;
+}
+footer {
+  padding-bottom: 20px;
+  background: url("/img/paper.png");
+}
+
+/* -------------------------
+-------- desktop -----------
+--------------------------*/
+@media(min-width: 968px) {
+  section {
+    padding: 80px;
+  }
+  .email-signup {
+    display: flex;
+    width: 40%;
+    margin-left: calc(30% + 25px);
+  }
+  .email-signup input {
+    border-radius: 5px;
+    border: 0;
+    padding: 15px;
+    box-shadow: inset 0 0 5px #222;
+    flex: 1;
+  }
+  #about p {
+    padding-left: 40px;
+  }
+  #about .copy {
+    padding: 80px;
+    line-height: 2em;
+  }
+  .faq-container {
+    width: 30%;
+    height: 275px;
+    padding: 20px;
+    background: #eee;
+    margin-top: 40px;
+    border-left: 8px solid #111;
+  }
+  .faq-container-div {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #sponsors p {
+    padding: 20px 50px 0 50px;
+  }
 }
