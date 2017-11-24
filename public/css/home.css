@@ -113,7 +113,8 @@ nav a:hover {
   box-shadow: 0 -0.5em 0 #db655d inset;
 }
 #faq {
-  background-image: url("/img/background_blue.png");
+  /*background-image: url("/img/background_blue.png");*/
+  background-color: #eaeaea;
   background-size: 300px;
   overflow: auto;
 }
