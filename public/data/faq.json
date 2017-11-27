@@ -1,10 +1,14 @@
 [{
     "Q": "What is a hackathon?",
-    "A": "A hackathon is 'coding marathon'. Participants form groups of 1-4 and spend 24 hours developing a project that gets them excited. Through workshops, mentors, mini-events, and teambuilding, participants will be able to grow their network and learn exciting new concepts all in one night."
+    "A": "A hackathon is 'coding marathon'. Participants form groups of one to four people and spend 24 hours developing whatever project excites them. Through workshops, mentors, mini-events, and teambuilding, participants will be able to create their project, grow their network, and learn exciting new concepts all in one night."
   },
   {
     "Q": "What can I build?",
     "A": "Anything! We've seen AI, games, websites, design/animations, and hardware. However, we encourage you take on a project that's 'outside-the-box'"
+  },
+  {
+  "Q": "How do I find a team?",
+  "A": "If you have a team of friends already, you are good to go: you should all apply and put each others' names in the 'team' section of the application. However, you absolutely do not need to come in with a team! We will network and make sure everyone has a team before the event starts."
   },
   {
     "Q": "Who can attend?",
@@ -20,11 +24,11 @@
   },
   {
     "Q": "Where is Hack Ridge?",
-    "A": "Hack Ridge will be located at Maine South High School in Park Ridge, IL"
+    "A": "Hack Ridge will be located at Maine South High School at 1111 South Dee Road, Park Ridge, IL, "
   },
   {
     "Q": "How can I get there?",
-    "A": "We currently cannot provide transportation to our event. Check in with us in February 2018 to see if this has changed!"
+    "A": "We currently cannot provide transportation to our event. Check in with us in February 2018 to see if this has changed! Maine South does, though, have free parking which you can use during the whole event."
   },
   {
     "Q": "What if I have a question not answered here?",
