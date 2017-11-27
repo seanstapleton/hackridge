@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/lib/aos/dist/aos.css" rel="stylesheet">
+    <link href="/lib/animate.css/animate.css" rel="stylesheet">
     <link href="/lib/sweetalert/sweetalert.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css"/>
@@ -20,12 +21,28 @@
       </ul>
     </nav>
 
+    <div class="overlay"></div>
+    <div class="modal-box animated" id="contact-form">
+      <h1>Contact Us</h1>
+      <form id="contactForm">
+        <div class="contact-form-container">
+          <input required type="text" id="contact_fname" placeholder="First name"/>
+          <input required type="text" id="contact_lname" placeholder="Last name"/>
+          <input type="email" id="contact_email" placeholder="Email"/>
+          <textarea id="contact_message" placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+
     <section id="intro">
       <div class="logo-med logo-white" data-aos="fade-up"></div>
-      <div class="email-signup" data-aos="fade-up">
-          <input type="text" placeholder="Join our mailing list!"/>
-          <button>Subscribe</button>
-      </div>
+      <form id="email-subscribe">
+        <div class="email-signup" data-aos="fade-up">
+            <input required type="email" placeholder="Join our mailing list!"/>
+            <button type="submit">Subscribe</button>
+        </div>
+      </form>
     </section>
     <section id="about">
       <h1 class="section-header">About</h1>
@@ -42,11 +59,7 @@
 
     <section id="sponsors">
       <h1 class="section-header">Sponsors</h1>
-      <p>Interested in sponsoring our event? Check out our <a>sponsor deck</a> or <a>contact us!</a></p>
-      <!-- <div class="text-center">
-        <button class="btn btn-action">View our sponsor deck</button>
-        <button class="btn btn-action">Contact Us</button>
-      </div> -->
+      <p data-aos="fade-left">Interested in sponsoring our event? Check out our <a id="sponsor-deck-btn">sponsor deck</a> or <a id="contact-us-btn">contact us!</a></p>
     </section>
 
     <footer>
@@ -57,5 +70,7 @@
   <script src="/lib/jquery/jquery.min.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="/lib/aos/dist/aos.js"></script>
+  <script src="/lib/animate.css/animate.min.js"></script>
+  <script src="/lib/sweetalert/sweetalert.min.js"></script>
   <script type="text/javascript" src="/js/home.js"></script>
 </html>
