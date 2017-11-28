@@ -1,5 +1,7 @@
 body {
   background-color: #eee;
+}
+.wrapper {
   max-width: 100%;
   overflow-x: hidden;
 }
