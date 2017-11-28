@@ -18,7 +18,8 @@
     "morgan": "~1.7.0",
     "nodemailer": "^2.7.0",
     "nodemailer-mailgun-transport": "^1.2.4",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "validator": "^9.1.2"
   },
   "main": "app.js",
   "author": "",

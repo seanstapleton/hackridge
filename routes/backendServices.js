@@ -11,6 +11,7 @@ module.exports = function(db) {
     var emailValidator  = require('email-validator');
     var bodyParser      = require('body-parser');
     var path            = require('path');
+    var validator       = require('validator');
 
     router.post('/subscribeToEmailList', function(req, res) {
       var email = new emailSchema({email: req.body.email});
@@ -22,6 +23,9 @@ module.exports = function(db) {
 
     router.post('/sendMessage', function(req, res) {
       var data = req.body;
+      Object.keys(data).map(function(key, index) {
+         data[key] = validator.escape(data[key]);
+      });
       var contact = new contactSchema(data);
       contact.save();
       var isValidEmail = emailValidator.validate(data.email);
