@@ -100,6 +100,11 @@
       hideModal();
     });
 
+    $("#menuToggle").click(function() {
+      $(".hamburger-menu").toggleClass("active");
+      $(this).toggleClass("active");
+    });
+
 
   });
 }());
