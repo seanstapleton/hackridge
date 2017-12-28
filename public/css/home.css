@@ -151,6 +151,18 @@ nav a:hover {
 .logo-black {
   background-image: url("/img/hack_ridge_logo_io_white.svg");
 }
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+}
+.sponsor-section-logo {
+  width: 250px;
+  padding: 10px 20px;
+}
 
 /* -------------------------
 --------- sections ---------
@@ -269,7 +281,7 @@ footer {
   nav {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     padding: 20px
   }
   nav li {
