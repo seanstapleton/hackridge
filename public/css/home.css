@@ -67,6 +67,10 @@ section {
   display: block;
   margin: 10px auto;
 }
+a.plain {
+  box-shadow: none !important;
+  color: transparent !important;
+}
 /* -------------------------
 ---------- nav -------------
 --------------------------*/
