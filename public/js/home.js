@@ -21,12 +21,16 @@
     });
 
     $.fn.extend({
-      animateCss: function (animationName) {
-          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-          this.addClass('animated ' + animationName).one(animationEnd, function() {
-              $(this).removeClass('animated ' + animationName);
-          });
-      }
+        animateCss: function (animationName, callback) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+                if (callback) {
+                  callback();
+                }
+            });
+            return this;
+        }
     });
 
     $(function() {
@@ -103,6 +107,24 @@
     $("#menuToggle").click(function() {
       $(".hamburger-menu").toggleClass("active");
       $(this).toggleClass("active");
+    });
+
+    $(".banner").click(function() {
+
+    });
+
+    $("#recap-2017").click(function() {
+      $(".overlay").addClass("show");
+      $(".video-modal").addClass("show animated");
+      $(".video-modal").animateCss("zoomIn")
+      $("body").addClass("noscroll");
+    });
+
+    $(".overlay").click(function() {
+      $(".overlay").removeClass("show");
+      $(".video-modal").removeClass("zoomIn");
+      $(".video-modal").animateCss("zoomOut", function() {$(".video-modal").removeClass("show");});
+      $("body").removeClass("noscroll");
     });
 
 
