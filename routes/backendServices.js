@@ -6,6 +6,7 @@ module.exports = function(db) {
     var mongoose        = require('mongoose');
     var emailSchema     = require('../models/email');
     var contactSchema   = require('../models/contact');
+    var attendeeSchema   = require('../models/attendee');
     var nodemailer      = require('nodemailer');
     var mg              = require('nodemailer-mailgun-transport');
     var emailValidator  = require('email-validator');
@@ -18,6 +19,15 @@ module.exports = function(db) {
       email.save(function(err) {
         if (err) res.end();
         else res.send("success");
+      });
+    });
+
+    router.post('/register', function(req, res) {
+      var attendee = new attendeeSchema(req.body);
+      var error;
+      attendee.save(function(err) {
+        if (err) res.send({success: false, error: err});
+        else res.send({success: true});
       });
     });
 

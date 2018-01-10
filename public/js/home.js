@@ -94,6 +94,39 @@
         });
     });
 
+    $("#application-form").submit(function(e) {
+      e.preventDefault();
+      var formData = {
+        student_fname: $("#student_fname").val(),
+        student_lname: $("#student_lname").val(),
+        student_email: $("#student_email").val(),
+        student_age: $("#student_age").val(),
+        student_school: $("#student_school").val(),
+        student_grade: $("#student_grade").val(),
+        student_tshirt: $("#student_tshirt").val(),
+        student_allergies: $("#student_allergies").val(),
+        student_medical: $("#student_medical").val(),
+        contact_fname: $("#contact_fname").val(),
+        contact_lname: $("#contact_lname").val(),
+        contact_relation: $("#contact_relation").val(),
+        contact_email: $("#contact_email").val(),
+        contact_phnum: $("#contact_phnum").val(),
+        form_agreement: $("#form_agreement").val()
+      };
+      $.post("/backendServices/register", formData)
+        .then(function(data) {
+          console.log(data);
+          if (data.success) {
+            swal("Success!", "Thanks for signing up! Expect a confirmation email sometime soon.", "success");
+            hideModal();
+          } else if (data.err){
+            swal("Whoops!", data.err, "error");
+          } else {
+            swal("Whoops!", "Looks like our servers aren't doing so hot. Please try again later or email info@hackridge.io", "error");
+          }
+        });
+    });
+
     $("#contact-us-btn").click(function() {
       $(".modal-box").removeClass("fadeOutDownBig").addClass("fadeInUpBig show");
       $("div.overlay").addClass("show");

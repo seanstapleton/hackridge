@@ -160,10 +160,17 @@ nav a:hover {
   background-repeat: no-repeat;
   min-height: 90vh;
 }
+#apply {
+  background-image: url("/img/background.png");
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: repeat;
+  min-height: 100vh;
+}
 .logo-med {
   width: 300px;
   height: 300px;
-  background-size: cover;
+  background-size: 80%;
   background-position: center center;
   background-repeat: no-repeat;
   display: block;
@@ -189,6 +196,22 @@ nav a:hover {
   width: 250px;
   padding: 10px 20px;
 }
+.landing-btn {
+  padding: 15px 40px;
+  width: 18%;
+  background-color: rgba(225,225,225,0.95);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #111 !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.landing-btn:hover {
+  background-color: rgba(245,245,245,0.92);
+}
 
 /* -------------------------
 --------- sections ---------
@@ -202,6 +225,42 @@ nav a:hover {
 }
 #about, #sponsors {
   background-image: url("/img/paper.png");
+}
+.signup-container {
+  width: 95%;
+  padding: 20px;
+  background-image: url('/img/paper.png');
+  margin: 40px auto;
+  border-radius: 5px;
+}
+.signup-container input, .signup-container textarea {
+  border: none;
+  padding: 15px 20px;
+  margin-bottom: 5%;
+  width: 100%;
+  box-shadow: 2.5px 2.5px 5px 0 rgba(0,0,0,0.1);
+}
+.signup-container select {
+  width: 100%;
+  padding: 15px 20px;
+  height: 46px;
+  border-radius: 0;
+  margin-bottom: 5%;
+  box-shadow: 2.5px 2.5px 5px 0 rgba(0,0,0,0.1);
+  border: none;
+  background-color: #fff;
+}
+.app-header {
+  text-align: center;
+  font-weight: bold;
+}
+.app-header + h4 {
+  text-align: center;
+}
+.app-subsection {
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 20px;
 }
 #sponsors p {
   font-size: 1.5em;
@@ -260,6 +319,45 @@ footer {
 /* -------------------------
 -------- desktop -----------
 --------------------------*/
+@media(min-width: 768px) {
+  .signup-container {
+    width: 60%;
+    padding: 50px;
+    background-image: url('/img/paper.png');
+    margin: 40px auto;
+    border-radius: 5px;
+  }
+  .signup-container input, .signup-container textarea {
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 4%;
+    width: 100%;
+    box-shadow: 2.5px 2.5px 5px 0 rgba(0,0,0,0.1);
+  }
+  .signup-container input.inp-50 {
+    width: calc(48% - 3px);
+  }
+  .signup-container input.inp-80 {
+    width: calc(80% - 15px);
+  }
+  .signup-container input.inp-20 {
+    width: calc(20% - 10px);
+  }
+  .signup-container select {
+    width: 100%;
+    padding: 15px 20px;
+    height: 46px;
+    border-radius: 0;
+    margin-bottom: 4%;
+    box-shadow: 2.5px 2.5px 5px 0 rgba(0,0,0,0.1);
+    border: none;
+    background-color: #fff;
+  }
+  .space-left {
+    margin-left: 4%;
+  }
+}
+
 @media(min-width: 968px) {
   section {
     padding: 80px 100px;
