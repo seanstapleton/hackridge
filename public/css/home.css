@@ -198,7 +198,7 @@ nav a:hover {
 }
 .landing-btn {
   padding: 15px 40px;
-  width: 18%;
+  width: 60%;
   background-color: rgba(225,225,225,0.95);
   border: none;
   border-radius: 5px;
@@ -320,6 +320,9 @@ footer {
 -------- desktop -----------
 --------------------------*/
 @media(min-width: 768px) {
+  .landing-btn {
+    width: 18%;
+  }
   .signup-container {
     width: 60%;
     padding: 50px;
