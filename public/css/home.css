@@ -341,10 +341,10 @@ footer {
     width: calc(48% - 3px);
   }
   .signup-container input.inp-80 {
-    width: calc(80% - 15px);
+    width: 76%;
   }
   .signup-container input.inp-20 {
-    width: calc(20% - 10px);
+    width: 19%;
   }
   .signup-container select {
     width: 100%;
