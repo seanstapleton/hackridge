@@ -154,14 +154,16 @@ nav a:hover {
   background-color: #eee;
 }
 #intro {
-  background-image: url("/img/background.png");
+  /*background-image: url("/img/background.png");*/
+  background-image: url('/img/op/workshop1.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   min-height: 90vh;
 }
 #apply {
-  background-image: url("/img/background.png");
+  background-image: linear-gradient(rgba(219,101,93,0.8), rgba(219,101,93,0.8)), url('/img/working.JPG');
+  background-attachment: fixed;
   background-size: 100%;
   background-position: center top;
   background-repeat: repeat;

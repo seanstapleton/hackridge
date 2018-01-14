@@ -7,6 +7,7 @@ var attendeeSchema = new Schema({
     student_email: String,
     student_age: Number,
     student_grade: String,
+    student_school: String,
     student_tshirt: String,
     student_allergies: String,
     student_medical: String,
