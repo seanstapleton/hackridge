@@ -13,12 +13,46 @@ module.exports = function(db) {
     var bodyParser      = require('body-parser');
     var path            = require('path');
     var validator       = require('validator');
+    var pug             = require('pug');
 
     router.post('/subscribeToEmailList', function(req, res) {
       var email = new emailSchema({email: req.body.email});
       email.save(function(err) {
         if (err) res.end();
         else res.send("success");
+      });
+    });
+
+    var sendConfirmationEmail = (userInfo, callback) => {
+      const compileFn = pug.compileFile(__dirname + '/../templates/confirmation.pug');
+      const compiledEmail = compileFn(userInfo);
+      var auth = {
+        auth: {
+          api_key: process.env.api_key,
+          domain: process.env.domain
+        }
+      }
+      var smtpTransporter = nodemailer.createTransport(mg(auth));
+      var message = {
+        from: 'team@hackridge.io',
+        to: userInfo.email,
+        subject: 'Hack Ridge Registration Received',
+        text: "We have received your registration and will keep you updated with new information. Feel free to reach out to us at info@hackridge.io if you have any questions or concerns. Get hyped!!",
+        html: compiledEmail
+      };
+      smtpTransporter.sendMail(message, function(err, info) {
+         callback(err, info);
+      });
+    }
+
+    router.post('/testEmail', function(req, res) {
+      sendConfirmationEmail(req.body, function(err, info) {
+        if (err) {
+          return res.send({success: false, err: "Looks like our servers aren't doing so hot. Please try again later."});
+          console.log(err);
+        } else {
+          return res.send({success: true});
+        }
       });
     });
 
