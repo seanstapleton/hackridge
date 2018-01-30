@@ -62,10 +62,10 @@ module.exports = function(db) {
         if (err) res.send({success: false, error: err});
         else {
           sendConfirmationEmail({name: req.body.student_fname, email: req.body.student_email})
-            .then(function(err, info) {
+            .then(function(info, err) {
               if (err) {
-                var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: err, date: new Date()});
-                errorSchema.save(function(err1) {
+                var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: JSON.stringify(err), date: new Date()});
+                newError.save(function(err1) {
                   if (err1) console.log(err1);
                 });
                 console.log(err);
