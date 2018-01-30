@@ -6,7 +6,8 @@ module.exports = function(db) {
     var mongoose        = require('mongoose');
     var emailSchema     = require('../models/email');
     var contactSchema   = require('../models/contact');
-    var attendeeSchema   = require('../models/attendee');
+    var errorSchema     = require('../models/error');
+    var attendeeSchema  = require('../models/attendee');
     var nodemailer      = require('nodemailer');
     var mg              = require('nodemailer-mailgun-transport');
     var emailValidator  = require('email-validator');
@@ -23,7 +24,7 @@ module.exports = function(db) {
       });
     });
 
-    var sendConfirmationEmail = (userInfo, callback) => {
+    var sendConfirmationEmail = (userInfo) => {
       const compileFn = pug.compileFile(__dirname + '/../templates/confirmation.pug');
       const compiledEmail = compileFn(userInfo);
       var auth = {
@@ -34,19 +35,18 @@ module.exports = function(db) {
       }
       var smtpTransporter = nodemailer.createTransport(mg(auth));
       var message = {
-        from: 'team@hackridge.io',
+        from: 'Hack Ridge Team <team@hackridge.io>',
         to: userInfo.email,
-        subject: 'Hack Ridge Registration Received',
+        subject: "Congratulations, you're in!",
         text: "We have received your registration and will keep you updated with new information. Feel free to reach out to us at info@hackridge.io if you have any questions or concerns. Get hyped!!",
         html: compiledEmail
       };
-      smtpTransporter.sendMail(message, function(err, info) {
-         callback(err, info);
-      });
+      return smtpTransporter.sendMail(message);
     }
 
     router.post('/testEmail', function(req, res) {
-      sendConfirmationEmail(req.body, function(err, info) {
+      sendConfirmationEmail(req.body)
+      .then(function(info, err) {
         if (err) {
           return res.send({success: false, err: "Looks like our servers aren't doing so hot. Please try again later."});
           console.log(err);
@@ -58,10 +58,21 @@ module.exports = function(db) {
 
     router.post('/register', function(req, res) {
       var attendee = new attendeeSchema(req.body);
-      var error;
       attendee.save(function(err) {
         if (err) res.send({success: false, error: err});
-        else res.send({success: true});
+        else {
+          sendConfirmationEmail({name: req.body.student_fname, email: req.body.student_email})
+            .then(function(err, info) {
+              if (err) {
+                var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: err, date: new Date()});
+                errorSchema.save(function(err1) {
+                  if (err1) console.log(err1);
+                });
+                console.log(err);
+              }
+            });
+          res.send({success: true});
+        }
       });
     });
 
