@@ -37,8 +37,8 @@ module.exports = function(db) {
       var message = {
         from: 'Hack Ridge Team <team@hackridge.io>',
         to: userInfo.email,
-        subject: "Congratulations, you're in!",
-        text: "We have received your registration and will keep you updated with new information. Feel free to reach out to us at info@hackridge.io if you have any questions or concerns. Get hyped!!",
+        subject: "Registration Confirmed!",
+        text: "We have received your registration and will keep you updated with new information about Hack Ridge. Feel free to reach out to us at team@hackridge.io if you have any questions or concerns. Get hyped!!",
         html: compiledEmail
       };
       return smtpTransporter.sendMail(message);
