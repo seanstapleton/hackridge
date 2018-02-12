@@ -128,11 +128,16 @@ nav a:hover {
 #about .section-header {
   box-shadow: 0 -0.45em 0 #db655d inset;
 }
+#schedule .section-header {
+  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
+}
+
 #sponsors .section-header {
   box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
 }
+
 #faq .section-header {
-  text-align: left;
+  box-shadow: 0 -0.45em 0 #db655d inset;
 }
 
 /* -------------------------
@@ -198,6 +203,10 @@ nav a:hover {
   width: 250px;
   padding: 10px 20px;
 }
+.vertical-sponsor-section-logo {
+  height: 125px;
+  padding: 10px, 20px;
+}
 .landing-btn {
   padding: 15px 40px;
   width: 60%;
@@ -225,7 +234,14 @@ nav a:hover {
   width: 80%;
   margin-left: 10%;
 }
-#about, #sponsors {
+#schedule .saturday {
+  padding: 40px 0 0 0;
+  line-height: 3em;
+  text-align: justify;
+  width: 80%;
+  margin-left: 10%;
+}
+#about, #faq {
   background-image: url("/img/paper.png");
 }
 .signup-container {
@@ -283,6 +299,9 @@ nav a:hover {
   background-color: #eaeaea;
   background-size: 300px;
   overflow: auto;
+}
+#schedule, #sponsors {
+  background-color: #eaeaea
 }
 .faq-container-div {
   padding: 20px;
@@ -381,12 +400,31 @@ footer {
   #about p {
     padding-left: 40px;
   }
+  #schedule h2 {
+    padding-bottom: 20px;
+  }
+  #schedule .description {
+    align: right;
+    font-size: 22px;
+    float: right;
+  }
+  #schedule .time {
+    padding-left: 40px;
+    font-size: 30px;
+  }
   #about .copy {
     padding: 60px 0 30px 0;
     line-height: 2em;
     width: 70%;
     margin-left: 15%;
   }
+  #schedule .copy {
+    padding: 60px 0 0px 0;
+    line-height: 3em;
+    width: 70%;
+    margin-left: 15%;
+  }
+
   .faq-container {
     width: 42.5%;
     margin-top: 20px;
