@@ -38,6 +38,7 @@
       <div id="menuToggle">
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#location">Location</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
@@ -83,6 +84,19 @@
         <p style="text-align: center; margin-top: 40px; cursor: pointer;" id="recap-2017"><span class="glyphicon glyphicon-play"></span> Watch our 2017 Recap!</p>
       </div>
     </section>
+
+    <section id='location'>
+        <h2 class='section-header'>Location</h2>
+        <div class="copy" data-aos="fade-left">
+          <p>Hack Ridge is held in the cafeteria of Maine South High School. The address is 1111 S Dee Rd.</p>
+          <div class="map-overlay" ng-click="mapClick()" ng-if="!mapClickability"></div>
+          <iframe data-aos="zoom-in" data-aos-delay='200' width="90%" height="500px"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC4o3Lx7_ycl1fg-Y8NDilas_ZsruAONGQ&q=Maine+South" allowfullscreen>
+          </iframe>
+        </div>
+    </section>
+
 
     <section id="schedule">
       <h1 class="section-header">Schedule</h1>

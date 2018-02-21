@@ -129,15 +129,19 @@ nav a:hover {
   box-shadow: 0 -0.45em 0 #db655d inset;
 }
 #schedule .section-header {
-  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
+  box-shadow: 0 -0.45em 0 #db655d inset;
 }
 
 #sponsors .section-header {
+  box-shadow: 0 -0.45em 0 #db655d inset;
+}
+#location .section-header {
   box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
 }
 
+
 #faq .section-header {
-  box-shadow: 0 -0.45em 0 #db655d inset;
+  box-shadow: 0 -0.45em 0 rgba(78,150,226,255) inset;
 }
 
 /* -------------------------
@@ -240,6 +244,13 @@ nav a:hover {
   margin-left: 10%;
 }
 #schedule .copy {
+  padding: 40px 0 0 0;
+  line-height: 3em;
+  text-align: justify;
+  width: 80%;
+  margin-left: 10%;
+}
+#location .copy {
   padding: 40px 0 0 0;
   line-height: 3em;
   text-align: justify;
