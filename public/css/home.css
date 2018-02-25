@@ -11,6 +11,10 @@ section {
 * {
   font-family: 'Poppins';
 }
+.sponsor-section-logo-big {
+  width: 300px;
+  padding: 10px 20px;
+}
 .noscroll {
   overflow: hidden;
 }
