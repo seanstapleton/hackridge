@@ -24,7 +24,7 @@ module.exports = function(db) {
 
   app.use('/backendServices', backendServices(db));
   app.get('/apply', function(req,res) {res.sendFile(__dirname + '/public/application.html'); });
-  app.get('*', function(req,res) {res.sendFile(__dirname + '/public/index.html'); })
+  app.get('*', function(req,res) {res.sendFile(__dirname + '/public/index.html'); });
   app.use('/public', express.static(__dirname + '/public'));
 
   // catch 404 and forward to error handler
