@@ -366,9 +366,12 @@ nav a:hover {
   background-color: #FB7C79;
 }
 
-footer p {
+.footer-text {
   color: #bbb;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: -20px;
+  font-size: 1em !important;
 }
 footer {
   padding-bottom: 20px;
@@ -380,7 +383,7 @@ footer {
 --------------------------*/
 @media(min-width: 768px) {
   .landing-btn {
-    width: 18%;
+    width: 25%;
   }
   .signup-container {
     width: 60%;
@@ -574,7 +577,6 @@ footer {
     max-height: 70px;
   }
   #menuToggle.active {
-    background-color: #ddd;
     width: 100%;
   }
   #menuToggle ul {
