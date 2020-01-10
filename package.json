@@ -18,7 +18,9 @@
     "morgan": "^1.9.1",
     "nodemailer": "^2.7.0",
     "nodemailer-mailgun-transport": "^1.2.4",
+    "prompt": "^1.0.0",
     "pug": "^2.0.0-rc.4",
+    "readline-sync": "^1.4.10",
     "serve-favicon": "^2.5.0",
     "validator": "^9.1.2"
   },
