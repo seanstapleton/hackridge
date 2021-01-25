@@ -56,24 +56,28 @@ module.exports = function(db) {
       });
     });
 
-    router.post('/register', function(req, res) {
-      var attendee = new attendeeSchema(req.body);
-      attendee.save(function(err) {
-        if (err) res.send({success: false, error: err});
-        else {
-          sendConfirmationEmail({name: req.body.student_fname, email: req.body.student_email})
-            .then(function(info, err) {
-              if (err) {
-                var newError = new errorSchema({name: req.body.student_fname, email: req.body.student_email, error: JSON.stringify(err), date: new Date()});
-                newError.save(function(err1) {
-                  if (err1) console.log(err1);
-                });
-                console.log(err);
-              }
-            });
-          res.send({success: true});
-        }
-      });
+    // Register a new Hack Ridge attendee
+    router.post('/register', async (req, res) => {
+      try {
+        const attendee = new attendeeSchema(req.body);
+        await attendee.save();
+        await sendConfirmationEmail({
+          name: req.body.student_fname,
+          email: req.body.student_email
+        });
+        res.send({ success: true });
+      } catch (err) {
+        // Registration failed. Log an error in the DB.
+        console.log(err);
+        const newError = new errorSchema({
+          name: req.body.student_fname,
+          email: req.body.student_email,
+          error: JSON.stringify(err),
+          date: new Date()
+        });
+        await newError.save();
+        res.send({ success: false, error: err }); 
+      }
     });
 
     router.post('/sendMessage', function(req, res) {
