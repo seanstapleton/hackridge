@@ -112,7 +112,7 @@
         contact_relation: $("#contact_relation").val(),
         contact_email: $("#contact_email").val(),
         contact_phnum: $("#contact_phnum").val(),
-        form_agreement: $("#form_agreement").val()
+        form_agreement: $("#form_agreement").val() === "on"
       };
       $.post("/backendServices/register", formData)
         .then(function(data) {
