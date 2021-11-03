@@ -22,7 +22,7 @@
     "pug": "^3.0.0",
     "readline-sync": "^1.4.10",
     "serve-favicon": "^2.5.0",
-    "validator": "^13.5.2"
+    "validator": "^13.7.0"
   },
   "main": "app.js",
   "author": "",
